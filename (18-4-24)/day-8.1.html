@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var obj = {
+        name: "Anif",
+        age: 21,
+        address: "Anantapur",
+        interests: { cricket: "80%", chess: "70%" },
+      };
+      console.log(obj);
+      console.log(obj.name);
+      console.log(obj.age);
+      console.log(obj["address"]);
+      console.log(Object.keys(obj)); //for printing keys of object, it returns those in array
+      console.log(Object.values(obj)); // for printing values of an object
+      console.log(Object.entries(obj)); // for printing both the keys and values of an object
+
+      var obj1 = obj;
+      obj.name = "Ravi";
+      console.log(obj, obj1); // here both var values will change because they are reference of memory
+
+      var obj2 = Object.assign({}, obj);
+      obj.name = "Prabhas";
+      obj.interests.cricket = "70%";
+      console.log(obj, obj2);
+
+      var obj3 = structuredClone(obj); // for doing deep clone all properties and nested objects also
+      obj.interests.chess = "50%";
+      console.log(obj, obj3);
+
+      //not allowing to update  the properties
+      var school = { name: "ramesh", age: 15, class: "9th class", fees: 28000 };
+      //   Object.freeze(school.name);   // it freezes whole object
+      Object.defineProperty(school, "name", {
+        value: "ramesh",
+        writable: false,
+      });
+
+      school.name = "ramesh kumar";
+      school.age = 16;
+      console.log(school.name);
+      console.log(school.age);
+    </script>
+  </head>
+  <body>
+    <h1>Object</h1>
+  </body>
+</html>
