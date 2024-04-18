@@ -1,9 +1,11 @@
+//creating function for adding two numbers
 function AddTwoNumbers(x, y) {
   res = x + y;
   return res;
 }
 console.log(AddTwoNumbers(20, 30));
 
+//creating function for checking given num is prime or not
 function isPrime(num) {
   res = true;
   for (var i = 2; i < num; i++) {
@@ -18,9 +20,9 @@ function isPrime(num) {
     return `${num} is not a prime number`;
   }
 }
-
 console.log(isPrime(37));
 
+//function for printing fibinocci series
 function fib(num) {
   var n1 = 0;
   var n2 = 1;
@@ -122,6 +124,23 @@ function sqrt(num) {
   }
 }
 console.log(sqrt(81));
+
+//finding lcm(least common multiple) of two numbers
+function lcm(x, y) {
+  r = 0;
+  var i = 1;
+  while (true) {
+    if (i % x == 0 && i % y == 0) {
+      r = i;
+      break;
+    }
+    i++;
+  }
+  return r;
+}
+console.log(lcm(5, 8));
+// 5=5,10,15,20,25,30,35,40,45
+// 8=8,16,24,32,40
 
 //finding GCM(greatest common measure) of two numbers
 function gcd(x, y) {
