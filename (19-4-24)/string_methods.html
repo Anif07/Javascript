@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      str = "hello all good morning";
+      //1. length method
+      console.log(str.length);
+
+      //2. Extracting string characters
+      // we can extract in 3 ways
+      str = "hello all good morning";
+      console.log(str[4]);
+      console.log(str[-1]); // this will give undefined when negative indexes
+      console.log(str.charAt(1));
+      console.log(str.charAt(-1)); // it will give empty rather than undefined
+      console.log(str.at(1));
+      console.log(str.at(-1)); // it will give character from reverse when negative indexes,
+      console.log(str.at(50)); // it will give undefined because 50th position not have any character
+
+      //3. Extracting some part of string
+      str = "hello all good morning";
+      console.log(str.slice(2, 6));
+      console.log(str.slice(2));
+      console.log(str.slice(-1));
+      console.log(str.slice(-5, -1));
+
+      console.log(str.substring(10, 15));
+      console.log(str.substring(-5)); // values less tha 0 are treated as 0 in substring
+      console.log(str.substr(10, 15)); //The difference is that the second parameter specifies the length of the extracted part.
+      console.log(str.substr(-4)); //If the first parameter is negative, the position counts from the end of the string.
+
+      //4. Converting to Upper and Lower Case----->toUpperCase(),toLowerCase()
+      str = "Hello All good morNIng";
+      console.log(str.toUpperCase());
+      console.log(str.toLowerCase());
+
+      //5. String concat()
+      str1 = "mahammad";
+      str2 = "anif";
+      console.log(str1 + str2); //first way of concatination
+      console.log(str1.concat(str2)); // second way of concatination
+      console.log(str1.concat(" ", str2));
+
+      //6. trimming
+      str1 = "           Anif";
+      console.log(str1);
+      console.log(str1.trimStart()); //trimming in starting
+      str2 = "mahammad               ";
+      console.log(str2);
+      console.log(str2.trimEnd()); //trimming at end
+      str3 = "          hello            ";
+      console.log(str3);
+      console.log(str3.trim());
+    </script>
+  </head>
+  <body></body>
+</html>
