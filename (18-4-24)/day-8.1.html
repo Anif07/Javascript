@@ -44,6 +44,33 @@
       school.age = 16;
       console.log(school.name);
       console.log(school.age);
+
+      //Assignments
+      //1.  in an object user cannot able to edit or update the value of one key (id)
+      var movie = { name: "kalki", yor: 2024, budget: "200cr" };
+      Object.defineProperty(movie, "name", {
+        value: "kalki",
+        writable: false,
+      });
+      movie.name = "kalkiad2029"; // it does not modify because of defineproperty and we can modify other values
+      console.log(movie);
+
+      //2.in an object user cannot able to edit or update the values of all keys
+      var school = { name: "ramesh", age: 15, class: "9th class", fees: 28000 };
+      Object.freeze(school); // we cannt able to update or delete or add because is is freezen
+      school.name = "ramesh kumar yadav";
+      school.age = "17";
+      console.log(school);
+      delete school.fees;
+      school.sports = "cricket";
+
+      //3. in an object user cannot able to add new properties
+      var movie = { name: "kalki", yor: 2024, budget: "200cr" };
+      Object.seal(movie); // we can not add or delete properties but we can update values
+      movie.collection = "550cr"; //it wont allow adding
+      delete movie.budget; // it wont allow deletion
+      movie.yor = 2025; // it will allow updation
+      console.log(movie);
     </script>
   </head>
   <body>

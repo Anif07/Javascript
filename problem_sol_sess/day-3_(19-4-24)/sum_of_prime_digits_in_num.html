@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Write a program to print the sum of prime digits in the given number.
+      function sumOfPrime(num) {
+        var sum = 0;
+
+        for (var j of num.toString()) {
+          var prime = true;
+          var j = +j;
+          for (var i = 2; i < j; i++) {
+            if (j % i == 0) {
+              prime = false;
+            }
+          }
+          // return prime == true ? "prime number" : "not a prime number";
+          if (prime) {
+            sum += j;
+          }
+        }
+        return `sum of prime digits in a given num ${num} is ${sum}`;
+      }
+      console.log(sumOfPrime(4578));
+    </script>
+  </head>
+  <body></body>
+</html>

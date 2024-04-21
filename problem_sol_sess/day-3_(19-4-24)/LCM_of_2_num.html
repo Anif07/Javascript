@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function lcm(n1, n2) {
+        // 2->2,4,8,10,12,14,16,
+        // 8->8,16,24
+        var max = n1 > n2 ? n1 : n2;
+        var temp = max;
+        while (true) {
+          if (max % n1 == 0 && max % n2 == 0) {
+            return `lcm of given numbers ${n1} and ${n2} is ${max}`;
+            break;
+          }
+          max += temp;
+        }
+      }
+      console.log(lcm(25, 36));
+
+      // or
+      function lcm(n1, n2) {
+        var max = n1 > n2 ? n1 : n2;
+        var temp = max;
+        while (true) {
+          if (max % n1 == 0 && max % n2 == 0) {
+            return `lcm of given numbers ${n1} and ${n2} is ${max}`;
+            break;
+          }
+          max += 1;
+        }
+      }
+      console.log(lcm(25, 36));
+    </script>
+  </head>
+  <body></body>
+</html>

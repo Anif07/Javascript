@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Write a program to print the sum of digits in the given number.
+      //input: 316;
+      //output: 10;
+      function sumOfDigits(num) {
+        var sum = 0;
+        for (var i of num.toString()) {
+          sum += +i;
+        }
+        return `sum of digits in a given num ${num} is ${sum}`;
+      }
+      console.log(sumOfDigits(8123));
+    </script>
+  </head>
+  <body></body>
+</html>

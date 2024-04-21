@@ -54,6 +54,71 @@
       str3 = "          hello            ";
       console.log(str3);
       console.log(str3.trim());
+
+      //7.Padstart()
+      var text = "5";
+      console.log(text.padStart(4, "0"));
+      // var num = 23;
+      // console.log(num.padStart(5, "0")); //it will not apply for number it will through error(typeError)
+      var text = "Anif";
+      console.log(text.padEnd(7, 5));
+
+      //8. repeat()
+      var str = "Hello ";
+      console.log(str.repeat(20));
+
+      //9. replace()
+      var str = "Hello guys where are you from";
+      console.log(str.replace("from", "going")); // it will work
+      console.log(str.replace("From", "going")); // it will not work because of capital letter(case sensitive)
+      console.log(str.replace(/From/i, "going")); //it will work because this is regular expression  i means insensitive
+      var str = "Hello guys where are you from you are you";
+      console.log(str.replace("you", "we"));
+      console.log(str.replaceAll("you", "we")); // it will replace all
+
+      //10. split()
+      var str = "Hello guys where are you from";
+      res = str.split();
+      console.log(res);
+      res = str.split("");
+      console.log(res);
+      res = str.split(" ");
+      console.log(res);
+
+      //String search Methods
+      //1. indexOf()
+      var str = "Hello guys where are you guys from guys ready";
+      console.log(str.indexOf("guys"));
+      console.log(str.indexOf("guys", 8)); // second parameter indicate starting position for the search
+      console.log(str.indexOf("Anif")); // it wil return -1 because there is no string
+
+      //2. lastIndexOf()
+      var str = "Hello guys where are you guys from guys ready";
+      console.log(str.lastIndexOf("guys"));
+      console.log(str.lastIndexOf("guys", 20));
+      console.log(str.lastIndexOf("Anif")); // it will return -1 because no such string anif
+
+      //3. search()
+      var str = "Hello guys where are you guys from guys ready";
+      console.log(str.search("where"));
+      console.log(str.search(/WHere/i)); //it will accept regular expression, but indexof will not accept
+
+      //4. match()
+      var str = "The rain in Spain falls mainly in the plain";
+      var regex = /ain/g;
+      var matches = str.match(regex);
+      console.log(matches); // Output: ["ain", "ain", "ain", "ain"]
+
+      //5. include()
+      var str = "The rain in Spain falls mainly in the plain";
+      console.log(str.includes("in"));
+      console.log(str.includes("an"));
+      console.log(str.includes("ain", 15));
+
+      //6. startswith()
+      var str = "The rain in Spain falls mainly in the plain";
+      console.log(str.startsWith("The"));
+      console.log(str.startsWith("rain", 4));
     </script>
   </head>
   <body></body>
