@@ -124,41 +124,51 @@ function sqrt(num) {
   }
 }
 console.log(sqrt(81));
+//or
+function sqrt(num) {
+  var res = 0;
+  for (var i = 1; i < num; i++) {
+    if (i * i == num) {
+      res = i;
+    }
+  }
+  if (res != 0) {
+    return res;
+  } else {
+    return "given number is not perfect square";
+  }
+}
+console.log(sqrt(25));
 
 //finding lcm(least common multiple) of two numbers
-function lcm(x, y) {
-  r = 0;
-  var i = 1;
+function lcm(n1, n2) {
+  var i = n1 > n2 ? n1 : n2;
+  var res = 1;
   while (true) {
-    if (i % x == 0 && i % y == 0) {
-      r = i;
+    if (i % n1 == 0 && i % n2 == 0) {
+      res = i;
       break;
     }
     i++;
   }
-  return r;
+  return res;
 }
-console.log(lcm(5, 8));
+console.log(lcm(15, 50));
 // 5=5,10,15,20,25,30,35,40,45
 // 8=8,16,24,32,40
 
 //finding GCM(greatest common measure) of two numbers
-function gcd(x, y) {
-  //hcf or gcd or gcm---->HIGHEST COMMON FACTOR (HCF) GREATEST COMMON DIVISOR(GCD) OR GREATEST COMMON MEASURE (GCM)
-  if (x > y) {
-    max = x;
-  } else {
-    max = y;
-  }
-  var r = 0;
-  for (var i = 1; i <= max; i++) {
-    if (x % i === 0 && y % i === 0) {
-      r = i;
+//hcf or gcd or gcm---->HIGHEST COMMON FACTOR (HCF) GREATEST COMMON DIVISOR(GCD) OR GREATEST COMMON MEASURE (GCM)
+function hcf(n1, n2) {
+  max = n1 > n2 ? n1 : n2;
+  var hcf = 1;
+  for (var i = 2; i <= max; i++)
+    if (n1 % i == 0 && n2 % i == 0) {
+      hcf = i;
     }
-  }
-  return r;
+  return hcf;
 }
+console.log(hcf(24, 36));
 
-console.log(gcd(24, 36));
 //24-->2,4,6,12,24
 //36-->2,3,4,6,9,12,18,36

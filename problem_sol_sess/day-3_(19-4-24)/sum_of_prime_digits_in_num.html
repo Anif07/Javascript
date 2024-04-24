@@ -6,25 +6,24 @@
     <title>Document</title>
     <script>
       //Write a program to print the sum of prime digits in the given number.
-      function sumOfPrime(num) {
+      function prime(num) {
         var sum = 0;
-
-        for (var j of num.toString()) {
-          var prime = true;
-          var j = +j;
-          for (var i = 2; i < j; i++) {
-            if (j % i == 0) {
-              prime = false;
+        num = num.toString();
+        for (var i of num) {
+          var isprime = true;
+          for (var j = 2; j < i; j++) {
+            if (i % j == 0) {
+              isprime = false;
+              break;
             }
           }
-          // return prime == true ? "prime number" : "not a prime number";
-          if (prime) {
-            sum += j;
+          if (isprime && i > 1) {
+            sum += parseInt(i);
           }
         }
-        return `sum of prime digits in a given num ${num} is ${sum}`;
+        return `sum of prime digits in a num ${num} is ${sum}`;
       }
-      console.log(sumOfPrime(4578));
+      console.log(prime(2543167));
     </script>
   </head>
   <body></body>

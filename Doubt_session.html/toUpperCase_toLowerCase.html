@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function touppercase(str) {
+        dup = "";
+        for (var i = 0; i < str.length; i++) {
+          var char = str[i];
+          if (char >= "a" && char <= "z") {
+            var charcode = char.charCodeAt(0);
+            var upper = String.fromCharCode(charcode - 32);
+            dup += upper;
+          } else {
+            dup += char;
+          }
+        }
+        return dup;
+      }
+      console.log(touppercase("MahAmmad Anif"));
+
+      function tolowercase(str) {
+        dup = "";
+        for (var i = 0; i < str.length; i++) {
+          char = str[i];
+          if (char >= "A" && char <= "Z") {
+            code = char.charCodeAt(0);
+            lower = String.fromCharCode(code + 32);
+            dup += lower;
+          } else {
+            dup += char;
+          }
+        }
+        return dup;
+      }
+      console.log(tolowercase("MAhaMMad ANif"));
+    </script>
+  </head>
+  <body></body>
+</html>

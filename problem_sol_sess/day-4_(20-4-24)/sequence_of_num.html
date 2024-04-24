@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //checking number is in sequence or not
+      //789 ->true
+      //524-->false
+      //   function sequence(num) {
+      //     num = num.toString();
+      //     c = 0;
+      //     sq = true;
+      //     for (i = 0; i < num.length; i++) {
+      //       if (num[i] < num[i + 1]) {
+      //         c += 1;
+      //       }
+      //     }
+      //     if (c == num.length - 1) {
+      //       return "num is in sequence";
+      //     } else {
+      //       return "num is not in squence";
+      //     }
+      //   }
+      //   console.log(sequence(1235));
+
+      function sequence(num) {
+        num = num.toString();
+        c = 0;
+        for (var i = 0; i < num.length; i++) {
+          if (num[i] < num[i + 1]) {
+            c++;
+          }
+        }
+        if (c == num.length - 1) return `num ${num} is in sequence`;
+        else return `num ${num} is not in  sequence`;
+      }
+      console.log(sequence(189));
+    </script>
+  </head>
+  <body></body>
+</html>

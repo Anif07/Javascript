@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Array methods
+      var arraystr = ["a", "b", "c", "d", "e"];
+      var arraynum = [1, 2, 3, 4, 5, 6, 7];
+
+      //1. lenth
+      console.log(arraystr.length);
+      console.log(arraynum.length);
+
+      //2. toString()
+      console.log(arraystr.toString());
+      console.log(arraynum.toString());
+
+      //3. push()  ---> adds a new element to an array at the end
+      arraystr.push("f");
+      console.log(arraystr);
+
+      //4. pop()  ---> removes last element from an array
+      arraystr.pop();
+      console.log(arraystr);
+
+      //5. for emptying the array
+      arraystr = []; // first method
+      console.log(arraystr);
+      arraynum.length = 0; //second method
+      console.log(arraynum);
+
+      // reassigning
+      var arraynum = [1, 2, 3, 4, 5, 6, 7];
+      arraydup = arraynum;
+      arraynum[0] = 9;
+      console.log(arraynum, arraydup); //both arrays will change beacause there reference of same location
+
+      arraynum = [];
+      console.log(arraynum, arraydup); //arraynum is refer to new array but arraydup is same reference
+
+      // 6. instanceOf ---> alternative for typeof because typeof will give object type for both array and object so javascript introduced instanceof will return different for object and array
+      obj = { id: 1, name: "anif" };
+      array = ["a", "b", "c", "d"];
+      console.log(obj instanceof Object);
+      console.log(obj instanceof Array);
+      console.log(array instanceof Array);
+      console.log(array instanceof Object); //array is object only
+      console.log("");
+
+      // 7. at() method
+      var arraynum = [1, 2, 3, 4, 5, 6, 7];
+      console.log(arraynum.at(2));
+      console.log(arraynum.at(-1));
+      console.log(arraynum.at(20)); //undefined
+
+      //8.join()
+      var arraynum = [1, 2, 3, 4, 5, 6, 7];
+      console.log(arraynum.join("-"));
+      arraystr = ["a", "b", "c", "d"];
+      console.log(arraystr.join("*"));
+
+      //9.reverse()
+      arraystr = ["a", "b", "c", "d"];
+      console.log(arraystr.reverse());
+      var arraynum = [1, 2, 3, 4, 5, 6, 7];
+      console.log(arraynum.reverse().join(" "));
+
+      //10.shif()  --->this method removes the first array element and shifts all other elements to a lower index
+      arraystr = ["a", "b", "c", "d"];
+      shiftedValue = arraystr.shift();
+      console.log(arraystr);
+      console.log(shiftedValue);
+
+      //11. unshift()
+      arraystr = ["a", "b", "c", "d"];
+      arraystr.unshift("z");
+      console.log(arraystr);
+      console.log("");
+
+      //12.concat()---->The concat() method creates a new array by merging (concatenating) existing arrays
+      arraystr1 = ["a", "b", "c", "d"];
+      arraystr2 = ["e", "f", "g", "h"];
+      console.log(arraystr1.concat(arraystr2));
+      console.log(arraystr1.concat(arraystr2, "i", "j"));
+      arraystr1.concat(arraystr2); //The concat() method does not change the existing arrays. It always returns a new array.
+      console.log(arraystr1); //The concat() method creates a new array by merging (concatenating) existing arrays
+
+      //13. copywith()---->The copyWithin() method copies array elements to another position in an array:
+      var arraynum = [1, 2, 3, 4, 5, 6, 7];
+      arraynum.copyWithin(2, 0); //copy to index 2 , all elements from index 0
+      console.log(arraynum);
+
+      var arraynum = [1, 2, 3, 4, 5, 6, 7];
+      arraynum.copyWithin(4, 2);
+      console.log(arraynum);
+
+      var arraynum = [1, 2, 3, 4, 5, 6, 7];
+      arraynum.copyWithin(2, 0, 2); //Copy to index 2, the elements from index 0 to 2:
+      console.log(arraynum);
+
+      //14.flat()---->The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+      var arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      console.log(arr);
+      console.log(arr.flat());
+
+      var arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, [8, 9]],
+      ];
+      console.log(arr);
+      console.log(arr.flat());
+      console.log(arr.flat(2)); //specifying depth for flattening, default value is 1 , it flats only depth 1
+
+      //15.slice() --->The slice() method slices out a piece of an array.
+      var arraynum = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log(arraynum.slice(2, 5));
+      console.log(arraynum.slice(3));
+      console.log(arraynum.slice(-1));
+
+      //16. splice() --->The splice() method adds new items to an array.
+      arraystr1 = ["a", "b", "c", "d", "e", "f"];
+      arraystr1.splice(2, 0, "z", "x");
+      console.log(arraystr1);
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.splice(2, 0, "Lemon", "Kiwi");
+      console.log(fruits);
+    </script>
+  </head>
+  <body></body>
+</html>

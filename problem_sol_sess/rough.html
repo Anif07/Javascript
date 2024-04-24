@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var num = "123512";
+      var empty = "123";
+      debugger;
+      for (var i of empty) {
+        //2
+        var c = 0;
+        for (var j of num) {
+          //1,2,3,1,2
+          if (i == j) {
+            c += 1;
+          }
+        }
+        if (c == 1) {
+          unique += i;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

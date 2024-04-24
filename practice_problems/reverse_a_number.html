@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //easy level questions
+      //32. Reverse a number using while Loop
+      function reverse_number(num) {
+        reverse_num = 0;
+        while (num > 0) {
+          x = num % 10;
+          reverse_num = reverse_num * 10 + x;
+          num = parseInt(num / 10);
+        }
+        return reverse_num;
+      }
+      var num = 123;
+      var reversedNum = reverse_number(num);
+      console.log("original number", num);
+      console.log("reversed number", reversedNum);
+    </script>
+  </head>
+  <body></body>
+</html>

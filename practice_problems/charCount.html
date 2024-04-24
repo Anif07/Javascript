@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
+      // Example:
+      // charCount("c", "Chamber of secrets") ➞ 1
+
+      function charCount(str1, str2) {
+        var c = 0;
+        for (var i of str2) {
+          if (str1 === i) {
+            c++;
+          }
+        }
+        return c;
+      }
+      str1 = "e";
+      str2 = "Chamber of secrets";
+      res = charCount(str1, str2);
+      console.log(`the character "${str1}" is found ${res} times in "${str2}"`);
+    </script>
+  </head>
+  <body></body>
+</html>

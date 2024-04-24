@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // finding back code for charAt() and at() methods
+      //   var char = {
+      //     charat: function (index) {},
+      //   };
+
+      function charat(str, index) {
+        if (index < 0 || index >= str.length) {
+          return "";
+        }
+        var c = 0;
+        for (i of str) {
+          if (c == index) {
+            return i;
+          }
+          c++;
+        }
+      }
+      console.log(charat("anif", 3));
+
+      //at() method
+      function at(str, index) {
+        if (index < 0) {
+          index = str.length - Math.abs(index); //for converting negative value to positive value
+          console.log(index);
+        } else {
+          c = 0;
+          for (var i of str) {
+            if (c == index) {
+              return i;
+            }
+            c++;
+          }
+        }
+      }
+      console.log(at("mahammad", -1));
+    </script>
+  </head>
+  <body></body>
+</html>

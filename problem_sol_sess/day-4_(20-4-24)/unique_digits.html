@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //printing unique digits and dulicate digits in number
+      //12315534  ->u=2,4, d=1,3,5
+      var num = prompt("enter a number:");
+      var empty = "",
+        unique = "",
+        duplicate = "";
+      for (i of num) {
+        if (!empty.includes(i)) {
+          empty += i;
+        }
+      }
+      for (i of empty) {
+        var c = 0;
+        for (j of num) {
+          if (i == j) c += 1;
+        }
+        if (c == 1) {
+          unique += i + " ";
+        } else {
+          duplicate += i + " ";
+        }
+      }
+      console.log("unique values are", unique);
+      console.log("duplicate values are", duplicate);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //easy level program
+      //21. Program to find greatest of three numbers(using ternery operator).
+      //   function greatest_of_3(n1, n2, n3) {
+      //     if (n1 > n2 && n1 > n3) {
+      //       return n1;
+      //     } else if (n2 > n3) {
+      //       return n2;
+      //     } else {
+      //       return n3;
+      //     }
+      //   }
+      //   console.log(greatest_of_3(6, 5, 7));
+
+      //using terinary operator
+      function greatest_of_3(n1, n2, n3) {
+        max = n1 > n2 && n1 > n3 ? n1 : n2 > n3 ? n2 : n3;
+        return max;
+      }
+      console.log(greatest_of_3(8, 7, 9));
+    </script>
+  </head>
+  <body></body>
+</html>

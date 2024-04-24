@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var num = 58362;
+      var max = Number.MIN_SAFE_INTEGER,
+        min = Number.MAX_SAFE_INTEGER;
+      for (var i of num.toString()) {
+        if (i > max) {
+          max = i;
+        } else if (i < min) {
+          min = i;
+        }
+      }
+      console.log(max, min);
+    </script>
+  </head>
+  <body></body>
+</html>

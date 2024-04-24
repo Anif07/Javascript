@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // easy level questions
+      // 18. Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+      // Example:
+      // reverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"
+      function reverseCase(str) {
+        var reverse = "";
+        for (var i of str) {
+          if (i >= "A" && i <= "Z") {
+            reverse += i.toLowerCase();
+          } else if (i >= "a" && i <= "z") {
+            reverse += i.toUpperCase();
+          } else {
+            reverse += i;
+          }
+        }
+        return reverse;
+      }
+      var str = "Happy Birthday!";
+      res = reverseCase(str);
+      console.log("original string is", str);
+      console.log("reverse_case string is", res);
+    </script>
+  </head>
+  <body></body>
+</html>
