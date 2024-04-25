@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
+      function phonenumber_with_array(arr) {
+        var c = 0;
+        var str = "";
+        for (var i of arr) {
+          c++;
+          str += i;
+          if (c == 3 || c == 6) {
+            str += "-";
+          }
+        }
+        return str;
+      }
+      arr = [9, 1, 1, 0, 5, 7, 7, 4, 9, 2];
+      console.log(phonenumber_with_array(arr));
+    </script>
+  </head>
+  <body></body>
+</html>

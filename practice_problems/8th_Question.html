@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Create a function that takes two strings as arguments and returns either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+
+      //first method
+      function characters(str1, str2) {
+        if (str1.length == str2.length) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(characters("school", "dinner"));
+      console.log(characters("schools", "dinner"));
+
+      //second method without using built in methods
+      function characters2(str1, str2) {
+        var str1_characters = 0,
+          str2_characters = 0;
+        for (var i of str1) {
+          str1_characters += 1;
+        }
+        for (var i of str2) {
+          str2_characters += 1;
+        }
+        if (str1_characters == str2_characters) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(characters("school", "dinner"));
+      console.log(characters("schools", "dinner"));
+    </script>
+  </head>
+  <body></body>
+</html>

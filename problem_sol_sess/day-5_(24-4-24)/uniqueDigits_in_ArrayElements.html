@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 2) Take an array of numbers, return the digits in the number only once, if they are repetead.
+      // input: [232,111,4688]
+      // output: 231468
+
+      array = [232, 111, 4688];
+      var str = "";
+      for (var i of array) {
+        for (var j of i.toString()) {
+          if (!str.includes(j)) {
+            str += j;
+          }
+        }
+      }
+      console.log(parseInt(str));
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 30. Program to count vowels and consonants in a given String.
+
+      // Input: i am ram
+      // Output: 3 vowels 3 consonants.
+
+      function count_vowels_consonents(str) {
+        str = str.toLowerCase();
+        var vowels = 0,
+          consonents = 0;
+        for (var i of str) {
+          var charcode = i.charCodeAt(0);
+          if (i == "a" || i == "e" || i == "i" || i == "o" || i == "u") {
+            vowels += 1;
+          } else if (charcode >= 97 && charcode <= 123) {
+            consonents += 1;
+          }
+        }
+        return [vowels, consonents];
+      }
+      var str = "i am ram";
+      var [vowels, consonents] = count_vowels_consonents(str);
+      console.log(vowels, "Vowels", consonents, "consonants");
+    </script>
+  </head>
+  <body></body>
+</html>

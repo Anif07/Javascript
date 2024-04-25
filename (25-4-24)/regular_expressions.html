@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //regular expressions
+      var str = "mahammad Anif is Student anif at 10k Coders";
+      var pattern = /anif/gi;
+      var result = str.match(pattern);
+      console.log(result);
+
+      //[abc]  Find any character between the brackets
+      var str = "mahammad Anif is Student anif at 10k Coders";
+      var pattern = /[abc]/;
+      var result = str.match(pattern);
+      console.log(result);
+      var str = "mahammad Anif is Student anif at best 10k Coders";
+      var pattern = /[abc]/gi;
+      var result = str.match(pattern);
+      console.log(result);
+
+      //[^abc]  Find any character NOT between the brackets (find characters which are not present in brackets)
+      var str = "mahammad anif studying!";
+      var pattern = /[^abc]/g;
+      console.log(str.match(pattern));
+
+      //[0-9]  Find any character between the brackets (any digit) (any character which are present in brackets)
+      var str = "mahammad 32 lam 450 87";
+      var pattern = /[0-7]/g;
+      console.log(str.match(pattern));
+
+      //[^0-9]  	Find any character NOT between the brackets (any non-digit)
+      var str = "mahammad 32 lam 450 87";
+      var pattern = /[^0-7]/g;
+      console.log(str.match(pattern));
+
+      //(x|y) Find any of the alternatives specified
+      var str = "banana apple cat monkey fight red green";
+      var pattern = /(apple|red)/g;
+      console.log(str.match(pattern));
+
+      //metacharacters
+      // . The . metacharacter matches any character, except newline or other line terminators.
+      //when we only know first and last characters
+      var str = "hot heart hit  heat ";
+      var pattern = /h.t/g;
+      console.log(str.match(pattern));
+
+      // \w The \w metacharacter matches word characters. A word character is a character a-z, A-Z, 0-9, including _ (underscore).
+      var str = "mahammad 32 lam 450 87 / ^ * $ # @ gftres";
+      var pattern = /\w/g;
+      console.log(str.match(pattern));
+
+      // \W  A global search for non-word characters (reverse of lower case w)
+      var str = "mahammad 32 lam 450 87 / ^ * $ # @ gftres";
+      var pattern = /\W/g;
+      console.log(str.match(pattern));
+
+      // \d  A global search for digits: The \d metacharacter matches digits from 0 to 9.
+      var str = "mahammad 32 lam 450 87";
+      var pattern = /\d/g;
+      console.log(str.match(pattern));
+
+      // \D A global search for non-digit characters:
+      var str = "mahammad 32 lam 450 87";
+      var pattern = /\D/g;
+      console.log(str.match(pattern));
+
+      // \s  A global search for whitespace characters:
+      var str = "mahammad 32 lam 450 87";
+      var pattern = /\s/g;
+      console.log(str.match(pattern));
+
+      // \S   A global search for non-whitespace characters:
+      var str = "mahammad 32 lam 450 87";
+      var pattern = /\S/g;
+      console.log(str.match(pattern));
+
+      // \b The \b metacharacter matches at the beginning or end of a word.Search for the pattern LO at the beginning of a word like this:\bLOSearch for the pattern LO at the end of a word like this:LO\b
+      var str = "HELLO, LOOK AT YOU";
+      var pattern = /\bLo/gi; //beginnig
+      console.log(str.match(pattern));
+      // or  --->end
+      var str = "HELLO, LOOK AT YOU";
+      var pattern = /ok\b/gi; //end
+      console.log(str.match(pattern));
+
+      // \B Find the first occurrence of "LO", NOT at the beginning of a word:
+      var str = "HELLO, LOOK AT YOU";
+      var pattern = /\Blo/gi;
+      console.log(str.match(pattern));
+
+      // \0
+      //\n
+      // \t
+
+      //Quantifiers
+      // + The n+ quantifier matches any string that contains at least one n.
+      var str = "mahammad anif is studiying javascript";
+      var pattern = /y+/g; // it should present atleast once
+      console.log(str.match(pattern));
+
+      // * The n* quantifier matches any string that contains zero or more occurrences of n.
+      var str = "mahammad anif is studiying javascript";
+      var pattern = /an*/g;
+      console.log(str.match(pattern));
+
+      // ? The n? quantifier matches any string that contains zero or one occurrences of n.
+      var str = "1, 100 or 1000?";
+      pattern = /10?/g;
+      console.log(str.match(pattern));
+
+      // ^ The ^n quantifier matches any string with n at the beginning of it.
+      var str = "Is this his";
+      var pattern = /^Is/g;
+      console.log(str.match(pattern));
+
+      //$ The n$ quantifier matches any string with n at the end of it.
+      var str = "Is this his";
+      var pattern = /is$/;
+      console.log(str.match(pattern));
+
+      // ? The ?=n quantifier matches any string that is followed by a specific string n.
+      var str = "Is this all there is";
+      var pattern = /re(?= is)/;
+      console.log(str.match(pattern));
+
+      // ?! The ?!n quantifier matches any string that is not followed by a specific string n.
+      var str = "Is this all there is";
+      var pattern = /is(?!all)/;
+      console.log(str.match(pattern));
+    </script>
+  </head>
+  <body></body>
+</html>

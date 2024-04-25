@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 31. program to insert  the elements of an array for specific index.
+      // Input: [1,2,3,4,5,7,8,9,10] , index=5
+      // Output: [1,2,3,4,5,6,78,9,10]
+
+      function insert_element(array, index, value) {
+        array.splice(index, 0, value);
+      }
+      array = [1, 2, 3, 4, 5, 7, 8, 9, 10];
+      index = 5;
+      value = 6;
+      console.log("original array:", array);
+      insert_element(array, index, value);
+      console.log("array after insertion:", array);
+
+      // or we can make that by using slice method also try once think once
+    </script>
+  </head>
+  <body></body>
+</html>

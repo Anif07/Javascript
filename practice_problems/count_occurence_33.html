@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 33. Count occurrence of number:
+
+      // Input: [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10] , no find=7
+      // Output: 7 present 2 times.
+      function occurance(array, value) {
+        c = 0;
+        for (var i of array) {
+          if (value === i) {
+            c++;
+          }
+        }
+        return c;
+      }
+      array = [1, 6, 3, 1, 5, 9, 7, 2, 1, 9, 3, 7, 8, 9, 10];
+      value = 7;
+      res = occurance(array, value);
+      console.log(`${value} present ${res} times`);
+    </script>
+  </head>
+  <body></body>
+</html>

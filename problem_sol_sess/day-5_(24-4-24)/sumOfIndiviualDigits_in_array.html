@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //1) Take array of numbers, return the sum of individual digits in the every number in number format
+      //input: [21, 45, 34, 441];
+      //output: 3979;
+      var arr = [21, 45, 34, 441];
+      var res = "";
+      for (i of arr) {
+        sum = 0;
+        for (j of i.toString()) {
+          sum += parseInt(j);
+        }
+        res += sum;
+      }
+      console.log(parseInt(res));
+    </script>
+  </head>
+  <body></body>
+</html>
