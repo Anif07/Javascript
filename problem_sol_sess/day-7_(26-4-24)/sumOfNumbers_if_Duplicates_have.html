@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 3) Write a program to print the sum of numbers in the array that contains duplicate numbers.
+      // input: [ 22, 121, 67, 345]
+      // output: 22+121 (sum)
+
+      var arr = [222, 121, 67, 345];
+      var sum = 0;
+      for (var i of arr) {
+        i = i.toString();
+        c = 0;
+        for (var j = 0; j < i.length; j++) {
+          for (var m = j + 1; m < i.length; m++) {
+            if (i[j] == i[m]) {
+              c++;
+            }
+          }
+        }
+        if (c > 0) {
+          sum += parseInt(i);
+        }
+      }
+      console.log(sum);
+    </script>
+  </head>
+  <body></body>
+</html>

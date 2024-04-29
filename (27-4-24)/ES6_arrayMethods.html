@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // js Callbacks
+      // callback function is a function that is passed as an argument to another function and is executed after some operation has been completed, or at a specified time
+      function greet(name, callback) {
+        console.log("hello" + name);
+        callback();
+      }
+      function sayGoodBye() {
+        console.log("goodbye!");
+      }
+      greet("anif", sayGoodBye);
+
+      //foreach() method
+      // foreach does not have a return value
+      //we cannot use return in foreach method
+      const numbers = [1, 2, 3, 4, 5, 6];
+      numbers.forEach((value, index) => {
+        value = value + 1;
+        console.log(value);
+      });
+
+      const numbers1 = [1, 2, 3, 4, 5];
+      numbers1.forEach((value, index) => console.log(value, index));
+
+      const numbers2 = [1, 2, 3, 4, 5];
+      var res = numbers2.forEach((value, index) => value * index); //it does not return any array or value
+      console.log(res);
+
+      var numbers4 = [1, 2, 3, 4, 5, 6];
+      var res = numbers4.forEach(function (value) {
+        value = value * value;
+        console.log(value);
+      });
+
+      //map() method
+      // it will return new array
+      // we can use return in map
+      var numbers3 = [1, 2, 3, 4, 5, 6];
+      var res = numbers3.map((value, index) => value + index); // it will return new array of result
+      console.log(res);
+
+      var numbers4 = [1, 2, 3, 4, 5, 6];
+      var res = numbers4.map(function (value) {
+        value = value * value;
+        return value;
+      });
+      console.log(res);
+
+      //filter() method
+      var numbers5 = [15, 24, 6, 45, 12, 2, 35, 10];
+      var res = numbers5.filter((value) => value > 18);
+      console.log("number before filtering", numbers5);
+      console.log("numbers after filtering (>18)", res);
+
+      var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 45, 78, 25];
+      res = number.filter(function (value) {
+        return value % 2 == 0;
+      });
+      console.log(res);
+
+      // Reduce() method
+      var numbers6 = [1, 2, 3, 4, 5];
+      res = numbers6.reduce((total, value) => total + value);
+      console.log(res);
+
+      var numbers6 = [1, 2, 3, 4, 5];
+      res = numbers6.reduce((total, value) => total - value);
+      console.log(res);
+
+      // reduceright() method
+      var numbers6 = [1, 2, 3, 4, 5];
+      res = numbers6.reduceRight((total, value) => total + value);
+      console.log(res);
+
+      var numbers6 = [1, 2, 3, 4, 5];
+      res = numbers6.reduceRight((total, value) => total - value);
+      console.log(res);
+
+      //every() method
+      var numbers6 = [1, 2, 3, 4, 5, 6, 7, 8];
+      alleven = numbers6.every(function (num) {
+        return num % 2 == 0;
+      });
+      console.log("all values are even ", alleven);
+
+      var numbers6 = [2, 4, 6, 8];
+      alleven = numbers6.every(function (num) {
+        return num % 2 == 0;
+      });
+      console.log("all values are even ", alleven);
+
+      //some() method
+      var numbers6 = [15, 24, 13, 2, 16, 17];
+      res = numbers6.some(function (num) {
+        return num > 18;
+      });
+      console.log("atlest one number is greater than 18", res);
+
+      //from() method
+      const str = "hello";
+      const strArray = Array.from(str);
+      console.log(strArray);
+
+      //keys()
+      var numbers6 = [15, 24, 13, 2, 16, 17];
+      console.log("keys method", numbers6);
+      res = numbers6.keys();
+      for (var i of res) {
+        console.log(i);
+      }
+
+      //entries()
+      var numbers6 = [15, 24, 13, 2, 16, 17];
+      console.log("entries method", numbers6);
+      res = numbers6.entries();
+      for (var i of res) {
+        console.log(i);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 28. Program to Display Characters from A to Z Using Loop with count.
+
+      // Output: A1 B2 C3 D4 E5 F6 ……. Z26
+
+      var charcode = 65;
+      var output = "";
+      for (var i = 1; i <= 26; i++) {
+        var char = String.fromCharCode(charcode);
+        output += char + i + " ";
+        charcode++;
+      }
+      console.log(output);
+    </script>
+  </head>
+  <body></body>
+</html>

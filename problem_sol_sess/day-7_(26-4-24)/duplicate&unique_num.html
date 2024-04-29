@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //1) Write a program to find duplicate and unique numbers in the array without using methods.
+      arr = [2, 1, 5, 3, 1, 2];
+      var dup = [],
+        unique = [];
+      num = [];
+      for (var i of arr) {
+        if (!num.includes(i)) {
+          num.push(i);
+        }
+      }
+      for (var i of num) {
+        var c = 0;
+        for (var j of arr) {
+          if (i == j) c++;
+        }
+        if (c == 1) {
+          unique.push(i);
+        } else dup.push(i);
+      }
+      console.log("duplicate numbers:", dup);
+      console.log("unique numbers:", unique);
+    </script>
+  </head>
+  <body></body>
+</html>

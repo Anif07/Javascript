@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //sort() method back code
+      function sorting(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          for (var j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[i]) {
+              x = arr[i];
+              arr[i] = arr[j];
+              arr[j] = x;
+            }
+          }
+        }
+        console.log(arr);
+      }
+      var arr = [5, 7, 22, 8, 6, 3];
+      sorting(arr);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //elements in array are increasing order or not
+      let arr = [22, 45, 69, 87];
+      var c = 0;
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < arr[i + 1]) {
+          c++;
+        }
+      }
+
+      if (c == arr.length - 1) {
+        console.log("True");
+      } else {
+        console.log("False");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

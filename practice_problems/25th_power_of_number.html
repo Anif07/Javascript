@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   25. Program to Calculate the Power of a Number(using loop only).
+
+      //   Input: n=5, p=3
+      //   Output: 5 ^ 3 = 125
+      //   Explanation: 5 x 5 x 5 = 125
+
+      function powerOfNum(n, p) {
+        var power = 1;
+        for (var i = 1; i <= p; i++) {
+          power *= n;
+        }
+        return power;
+      }
+      var n = 5,
+        p = 3;
+      console.log(powerOfNum(n, p));
+    </script>
+  </head>
+  <body></body>
+</html>

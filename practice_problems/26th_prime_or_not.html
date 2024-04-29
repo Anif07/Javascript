@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 26. Program to Check Whether a Number is Prime or Not
+
+      // Input: 9
+      // Output: 9 is not a prime no
+
+      // Input: 7
+      // Output : 7 is a prime no
+
+      function isPrime(num) {
+        var prime = true;
+        for (var i = 2; i < num; i++) {
+          if (num % i == 0) {
+            prime = false;
+            break;
+          }
+        }
+        if (prime == true) console.log(`${num} is a prime number`);
+        else console.log(`${num} is not a prime number`);
+      }
+      var num = 2;
+      isPrime(num);
+    </script>
+  </head>
+  <body></body>
+</html>

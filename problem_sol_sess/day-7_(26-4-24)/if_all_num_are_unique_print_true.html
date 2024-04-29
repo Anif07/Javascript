@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 2) Write a program that takes an array of number, return true if array contains only unique numbers otherwise return false.
+      // input: [2,7,6,5]
+      // output: True
+
+      // input: [12,45,12,23,12]
+      // output: False
+
+      var arr = [2, 7, 6, 6, 5];
+      var temp = [];
+      var unique = "True";
+      for (var i of arr) {
+        if (!temp.includes(i)) {
+          temp.push(i);
+        }
+      }
+      for (var i of temp) {
+        c = 0;
+        for (var j of arr) {
+          if (i == j) {
+            c++;
+          }
+        }
+        if (c > 1) {
+          unique = "False";
+        }
+      }
+      if (unique == "True") console.log("True");
+      else console.log("False");
+
+      //or
+      // in simple
+      var arr = [2, 7, 6, 6, 5];
+      var countOfDuplicates = 0;
+      for (var i = 0; i < arr.length; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+          if (arr[i] == arr[j]) {
+            countOfDuplicates++;
+          }
+        }
+      }
+      if (countOfDuplicates > 0) console.log("False");
+      else console.log("True");
+    </script>
+  </head>
+  <body></body>
+</html>

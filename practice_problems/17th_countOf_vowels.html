@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 17. Create a function that takes a string and returns the number (count) of vowels contained within it.
+      // Example:
+      // countVowels("Celebration") ➞ 5
+
+      function number_of_vowels(str) {
+        str = str.toLowerCase();
+        countOfVowels = 0;
+        for (var i = 0; i < str.length; i++) {
+          if (
+            str[i] == "a" ||
+            str[i] == "e" ||
+            str[i] == "i" ||
+            str[i] == "o" ||
+            str[i] == "u"
+          ) {
+            countOfVowels++;
+          }
+        }
+        return countOfVowels;
+      }
+      var str = "Celebration";
+      console.log(number_of_vowels(str));
+    </script>
+  </head>
+  <body></body>
+</html>

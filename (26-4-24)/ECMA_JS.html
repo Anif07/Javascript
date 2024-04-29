@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Arrow functions
+      const add = (a, b) => a + b;
+      console.log(add(28, 5));
+      //or
+      const add1 = (a, b) => {
+        return a + b;
+      };
+      console.log(add1(8, 3));
+
+      // spread operator
+      //The ... operator expands an iterable (like an array) into more elements:
+      //The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+      const arr1 = [1, 2, 3];
+      const arr2 = [4, 5, 6];
+      const combined = [...arr1, ...arr2];
+      console.log(combined);
+
+      const obj1 = { a: 1, b: 2 };
+      const obj2 = { c: 3, d: 4 };
+      const mergeobj = { ...obj1, ...obj2 };
+      console.log(mergeobj);
+
+      function sum(x, y, z) {
+        return x + y + z;
+      }
+      const numbers = [1, 2, 3];
+      console.log(sum(...numbers));
+
+      //Destructing---->Destructuring in JavaScript means unpacking values from arrays or properties from objects into separate variables, making your code cleaner and more concise.This process of breaking down complex data structures into simpler parts is known as destructuring.
+      // old way of assigning array items to a variable:
+      const vehicle = ["ferari", "black", "4-wheel_drive"];
+      const name = vehicle[0];
+      const color = vehicle[1];
+      const drive = vehicle[2];
+      console.log(name, color, drive);
+
+      // new way of assigning array items to a variable:
+      const vehicle1 = ["ferari", "black", "4-wheel_drive"];
+      const [name1, color1, drive1] = vehicle;
+      console.log(name1, color1, drive1);
+
+      // object destructuring
+      const person = { pname: "anif", age: 21, address: "anantapur" };
+      const { pname, age, address } = person;
+      console.log(pname, age, address);
+
+      //rest parameter
+      //The rest parameter allows you to represent an indefinite number of arguments as an array
+      //The rest parameter is used to collect multiple elements into an array
+      // 1.Function Parameters
+      function sum(...rest) {
+        let sum = 0;
+        for (var i of rest) {
+          sum += i;
+        }
+        return sum;
+      }
+      console.log(sum(1, 2));
+      console.log(sum(2, 3, 4));
+      console.log(sum(2, 3, 4, 5, 7, 8));
+      console.log("");
+
+      //2. Destructuring Assignments:
+      const [n1, n2, ...rest] = [1, 2, 3, 4, 5, 6];
+      console.log(n1);
+      console.log(n2);
+      console.log(rest);
+    </script>
+  </head>
+  <body></body>
+</html>
