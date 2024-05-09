@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 4) input: [23, 45, 65,12]
+      // output: False (array is not in sorted order)
+      // input: [34,12,11, -9]
+      // output: True ( array is in sorted order)
+
+      const arr = [23, 45, 65, 12];
+      //   const arr = [34, 12, 11, -9];
+      diff = arr[0] < arr[1];
+      if (diff == true) {
+        var c = 0;
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] < arr[i + 1]) {
+            c++;
+          }
+        }
+        if (c == arr.length - 1) {
+          console.log("True");
+        } else console.log("False");
+      } else {
+        var c = 0;
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] > arr[i + 1]) {
+            c++;
+          }
+        }
+        if (c == arr.length - 1) console.log("True");
+        else console.log("False");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

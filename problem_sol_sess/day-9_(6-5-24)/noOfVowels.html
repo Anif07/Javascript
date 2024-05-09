@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //method 1
+      str = "I am HAppy HerE with You";
+      vowels = "aeiouAEIOU";
+      result = "";
+      for (i of str) {
+        if (vowels.includes(i)) result += i;
+      }
+      console.log(result);
+
+      //method 2
+      // printing how many characters are there
+      str = "I am HAppy HerE wither ";
+      vowels = "aeiouAEIOU";
+      newstr = "";
+      for (i of str) {
+        if (vowels.includes(i)) newstr += i;
+      }
+      newstr = newstr.toLowerCase();
+      unique = "";
+      for (i of newstr) {
+        if (!unique.includes(i)) unique += i;
+      }
+      str = str.toLowerCase();
+      for (i of unique) {
+        c = 0;
+        for (j of str) {
+          if (i == j) c++;
+        }
+        console.log(i, "->", c);
+      }
+    </script>
+  </body>
+</html>

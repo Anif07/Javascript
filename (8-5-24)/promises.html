@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var promise = new Promise(function (resolve, reject) {
+        //do something
+      });
+
+      const count = true;
+      var countValue = new Promise(function (resolve, reject) {
+        if (count) {
+          resolve("there is a count value");
+        } else {
+          reject("there is no count value");
+        }
+      });
+      countValue
+        .then((result) => {
+          console.log("success", result);
+        })
+        .catch((error) => {
+          console.log("error", error);
+        })
+        .finally(() => {
+          console.log("This code is executed.");
+        });
+
+      var promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const success = true;
+          if (success) {
+            resolve("operation completed successfully");
+          } else {
+            reject("operation failed!");
+          }
+        });
+      }, 2000);
+      promise
+        .then((result) => {
+          console.log("success", result);
+        })
+        .catch((error) => {
+          console.log("error", error);
+        });
+    </script>
+  </body>
+</html>

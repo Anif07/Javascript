@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //get methods()
+      //1. getFullYear()
+      var d = new Date();
+      res = d.getFullYear();
+      console.log(res);
+
+      //2.getMonth()
+      var d = new Date();
+      res = d.getMonth();
+      console.log(res);
+      var d = new Date("2021-05-25");
+      d.getMonth();
+      console.log(res);
+      var months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      var d = new Date();
+      res = months[d.getMonth()];
+      console.log(res);
+
+      //3.getDate
+      d = new Date();
+      res = d.getDate();
+      console.log(res);
+
+      //4. getHours()
+      d = new Date();
+      console.log(d.getHours());
+
+      //5. getMinutes()
+      d = new Date();
+      console.log(d.getMinutes());
+
+      //6. getSeconds()
+      d = new Date();
+      console.log(d.getSeconds());
+
+      //7. getMilliseconds()
+      d = new Date();
+      console.log(d.getMilliseconds());
+
+      //8. getDay()
+      d = new Date();
+      console.log(d.getDay());
+
+      //9. getTime()
+      d = new Date();
+      console.log(d.getTime());
+
+      //set methods()
+      console.log("set methods..............................................");
+      //1. setFullYear()
+      var d = new Date();
+      d.setFullYear(2020);
+      console.log(d.getFullYear());
+      //optional month and date
+      var d = new Date();
+      d.setFullYear(2020, 5, 20);
+      console.log(d.getFullYear(), d.getMonth(), d.getDate());
+
+      //2. setMonth()
+      d = new Date();
+      d.setMonth(8);
+      console.log(d.getMonth());
+    </script>
+  </head>
+  <body></body>
+</html>

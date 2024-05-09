@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        height: 90vh;
+      }
+      #container {
+        background-color: aqua;
+        width: 400px;
+        height: 250px;
+        border-radius: 20px;
+        border: 2px solid black;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      input {
+        display: inline-block;
+        margin-top: 30px;
+        height: 35px;
+        border-radius: 20px;
+        border: 2px solid;
+        padding: 0 15px;
+        font-size: 1.2rem;
+      }
+      input::placeholder {
+        color: black;
+      }
+      button {
+        margin-top: 25px;
+        width: 80px;
+        height: 35px;
+        font-size: 15px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form action="" id="myForm">
+        <input type="text" placeholder="Enter name" id="name" required />
+
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <label for="" id="passwordLabel"></label>
+
+        <button type="submit" id="btn">Submit</button>
+      </form>
+    </div>
+    <script src="./Assignment_form.js"></script>
+  </body>
+</html>

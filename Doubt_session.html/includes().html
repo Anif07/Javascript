@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // back code for includes method
+      function includes(data, value) {
+        have = false;
+        for (var i of data) {
+          if (i == value) {
+            have = true;
+          }
+        }
+        return have;
+      }
+      data = "mahammad";
+      console.log(includes(data, "d"));
+      data = [1, 2, 3, 4, 5];
+      console.log(includes(data, 4));
+    </script>
+  </head>
+  <body></body>
+</html>

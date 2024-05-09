@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./formValidation.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button id="login-btn" onclick="openPopup()">Login</button>
+      <button>SignUp</button>
+      <span id="overlay"></span>
+      <div class="popup">
+        <input type="text" />
+        <input type="text" />
+        <input type="submit" onclick="closePopup()" class="submit" />
+      </div>
+    </div>
+    <script src="./formValidation.js"></script>
+  </body>
+</html>

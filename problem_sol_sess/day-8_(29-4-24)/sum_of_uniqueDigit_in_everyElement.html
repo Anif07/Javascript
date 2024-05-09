@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //class
+      //sum of unique digits in every individual element in array
+      // example  arr=[222,11,123]
+      // 2+1+1+2+3
+
+      const arr = [222, 11, 123];
+      let sum = 0;
+      for (var i of arr) {
+        let str = "";
+        for (var j of i.toString()) {
+          if (!str.includes(j)) {
+            sum += Number(j);
+            str += j;
+          }
+        }
+      }
+      console.log(sum);
+    </script>
+  </head>
+  <body></body>
+</html>

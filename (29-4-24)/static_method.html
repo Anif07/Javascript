@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //static method in oops
+
+      //example1
+      class test1 {
+        display() {
+          console.log("method in class");
+        }
+      }
+      var obj = new test1();
+      obj.display(); // output will come
+
+      //example2
+      class test2 {
+        static display() {
+          console.log("method in class");
+        }
+      }
+      var obj = new test2();
+      //obj.display(); // error will come
+      // to acces static method we can use class name
+      test2.display();
+
+      //example-3
+      // Le's see an example to invoke more than one static method.
+      class test3 {
+        static display1() {
+          console.log("static method 1");
+        }
+        static display2() {
+          console.log("static method 2");
+        }
+      }
+      test3.display1();
+      test3.display2(); // both will me executed
+
+      //Example-4
+      // Let's see an example to invoke more than one static method with similar names.
+      class test4 {
+        static display() {
+          console.log("static method  invoked");
+        }
+        static display() {
+          console.log("static method  invoked again");
+        }
+      }
+      test4.display(); // last written method is invoked
+
+      //Example-5
+      // Let's see an example to invoke a static method within the constructor.
+      class test5 {
+        constructor() {
+          test5.display();
+        }
+        static display() {
+          console.log("invoking static method within constructor");
+        }
+      }
+      var obj = new test5();
+
+      //example-6
+      //Let's see an example to invoke a static method within the non-static method.
+      class test6 {
+        static display() {
+          console.log("invoking static method within non-static method");
+        }
+        show() {
+          test6.display();
+        }
+      }
+      //test6.show(); // we cannot inkoke non-static method with class name
+      var obj = new test6();
+      obj.show();
+    </script>
+  </head>
+  <body></body>
+</html>

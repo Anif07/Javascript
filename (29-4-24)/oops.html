@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //oops concept
+      //classes
+      // class declaration
+      class employee {
+        //initialising an object
+        constructor(id, name) {
+          this.id = id;
+          this.name = name;
+        }
+        //declaring method
+        details() {
+          console.log(`id is:${this.id} and name:${this.name}`);
+        }
+      }
+      //passing object to a variable
+      var e1 = new employee(201, "harish");
+      var e2 = new employee(204, "ravi");
+      e1.details(); // calling method
+      e2.details();
+
+      // class expression
+      var emp = class {
+        constructor(id, name) {
+          this.id = id;
+          this.name = name;
+        }
+      };
+      console.log(emp.name);
+      e1 = new emp(1, "prabhas");
+      console.log(e1.name);
+
+      //this keyword
+      let laptop1 = {
+        cpu: "i5",
+        ram: 8,
+        brand: "hp",
+        get: function () {
+          console.log(laptop1.cpu);
+          console.log(this.cpu);
+        },
+      };
+
+      let laptop2 = {
+        cpu: "i7",
+        ram: 8,
+        brand: "hp",
+        get: function () {
+          console.log(laptop2.cpu);
+          console.log(this.cpu);
+        },
+      };
+      laptop1.get();
+      laptop2.get();
+
+      const person = {
+        name: "John",
+        age: 30,
+        greet() {
+          console.log(
+            "Hello, my name is " +
+              this.name +
+              " and I am " +
+              this.age +
+              " years old."
+          );
+        },
+      };
+
+      person.greet(); // Output: Hello, my name is John and I am 30 years old.
+
+      //INHERITANCE
+      class parent {
+        constructor() {
+          console.log("this is from parent class");
+        }
+      }
+      class child extends parent {
+        constructor() {
+          super();
+          console.log("this is from child class");
+        }
+      }
+      obj1 = new child();
+
+      //polymorphism
+      class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+        speak() {
+          console.log(this.name, "makes a sound");
+        }
+      }
+      class Dog extends Animal {
+        speak() {
+          console.log(this.name, "Barks");
+        }
+      }
+      const animal = new Animal("Animal");
+      const dog = new Dog("Dog");
+      animal.speak();
+      dog.speak();
+
+      // 2nd example
+      class firstClass {
+        add() {
+          console.log("First Method");
+        }
+      }
+      class secondClass extends firstClass {
+        add() {
+          console.log(30 + 40);
+        }
+      }
+      class thirdClass extends secondClass {
+        add() {
+          console.log("Last Method");
+        }
+      }
+      let ob = new firstClass();
+      let ob2 = new secondClass();
+      let ob3 = new thirdClass();
+      ob.add();
+      ob2.add();
+      ob3.add();
+
+      // Method overloading
+      function greet(para1) {
+        console.log("this function is 1 parameter");
+      }
+      function greet(para1, para2) {
+        console.log("this function have 2 parameters");
+      }
+      /* The above functions will be overwritten by the function below, and the below function will be executed for any number and any type of arguments */
+      function greet(para1, para2, para3) {
+        console.log("this function have 3 parameters");
+      }
+      greet("Anif");
+    </script>
+  </head>
+  <body></body>
+</html>

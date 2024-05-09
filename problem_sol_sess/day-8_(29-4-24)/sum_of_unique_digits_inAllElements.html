@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // class
+      // write a program to sum the unique digits in all elements
+      //example arr=[23,42,56,155]
+      //2+3+4+5+6+1
+
+      var arr = [23, 42, 56, 155];
+      var sum = 0;
+      var str = "";
+      for (var i of arr) {
+        x = String(i);
+        for (var j of x) {
+          if (!str.includes(j)) {
+            sum += Number(j);
+            str += j;
+          }
+        }
+      }
+      console.log(sum);
+    </script>
+  </head>
+  <body></body>
+</html>

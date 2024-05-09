@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #btn {
+        width: 400px;
+        height: 40px;
+        font-size: 1.3rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn" onclick="stopColor()">
+      stop Background colors changing
+    </button>
+    <script>
+      //Synchronous:
+      console.log("start");
+      console.log("middle");
+      console.log("end");
+      console.log("............................................");
+
+      //Asynchronous
+      console.log("start");
+      setTimeout(() => {
+        console.log("middle (after 1 second)");
+      }, 1000);
+      console.log("end");
+
+      //setInterval()
+      const interval = setInterval(() => {
+        console.log("Hi iam interval for 1 sec");
+      }, 1000);
+
+      //how to stop interval  ----by using clearInterval()
+      setTimeout(() => {
+        clearInterval(interval);
+        console.log("interval stopped after 5 seconds");
+      }, 5000);
+
+      const colorChange = setInterval(() => {
+        console.log(Math.random().toString().slice(-6));
+        document.body.style.backgroundColor = `#${Math.random()
+          .toString()
+          .slice(-6)}`;
+      }, 1000);
+
+      function stopColor() {
+        clearInterval(colorChange);
+      }
+    </script>
+  </body>
+</html>

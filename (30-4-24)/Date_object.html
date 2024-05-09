@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Date javascript
+      //1. new Date()
+      var d = new Date();
+      console.log(d);
+      //2. new Date(date string)
+      var d = new Date("2022-3-25");
+      console.log(d);
+
+      //3.
+      var d = new Date(2018, 11, 24, 10, 33, 30, 0);
+      console.log(d); //dec 2018
+      //JavaScript counts months from 0 to 11:
+      // January = 0.
+      // December = 11.
+      var d = new Date(2018, 15, 24, 10, 33, 30, 0); // here iam giving 15 as month it don't give error but overflow to next year
+      console.log(d);
+
+      //4. 6 numbers specify year, month, day, hour, minute, second:
+      var d = new Date(2018, 11, 24, 10, 33, 30);
+      console.log(d);
+
+      var d = new Date(2018);
+      console.log(d);
+
+      //5. milliseconds
+      //01 January 1970 plus 100 000 000 000 milliseconds is:
+      var d = new Date(100000000000);
+      console.log(d);
+    </script>
+  </head>
+  <body></body>
+</html>

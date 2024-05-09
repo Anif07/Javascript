@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //set
+      //Passing an array to new Set()
+      //Create an empty set and use add() to add values
+
+      //Pass an array to the new Set() constructor:
+      var letters = new Set(["a", "b", "c"]);
+      console.log(letters);
+      console.log(typeof letters);
+      console.log(letters instanceof Set);
+
+      //Create an empty set and use add() to add values
+      var letters = new Set();
+      letters.add("a");
+      letters.add("b");
+      letters.add("c");
+      letters.add("c");
+      letters.add("d");
+      console.log(letters);
+
+      str = "";
+      for (var i of letters) {
+        str += i;
+      }
+      console.log(str);
+
+      //has
+      console.log(letters.has("b"));
+      console.log(letters.has("z"));
+
+      //values
+      console.log(letters.values());
+
+      //keys
+      console.log(letters.keys());
+      //entries
+      console.log(letters.entries());
+    </script>
+  </head>
+  <body></body>
+</html>

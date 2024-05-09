@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 2) input: [[2,4,5],[12,4,5],[1,0],[7,4,3,3]]
+      // output: 5413;
+      const arr = [
+        [2, 4, 5],
+        [12, 4, 5],
+        [1, 0],
+        [7, 4, 3, 3],
+      ];
+      let res = "";
+      for (var i in arr) {
+        if (i % 2 == 0) {
+          // var max = 0;
+          var max = arr[i][0];
+          for (var i of arr[i]) {
+            if (i > max) max = i;
+          }
+          res += max;
+        } else if (i % 2 != 0) {
+          var min = Number.MAX_SAFE_INTEGER;
+          for (var i of arr[i]) {
+            if (i < min) min = i;
+          }
+          res += min;
+        }
+      }
+      console.log(res);
+    </script>
+  </head>
+  <body></body>
+</html>

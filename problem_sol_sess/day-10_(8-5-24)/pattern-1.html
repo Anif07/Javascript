@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //first pattern
+      var num = +prompt("Enter a number");
+      for (var i = 1; i <= num; i++) {
+        s = "";
+        for (var j = 1; j <= i; j++) {
+          s = s + "*" + " ";
+        }
+        console.log(s);
+      }
+
+      //second pattern
+      var num = +prompt("Enter a number");
+      for (var i = 1; i <= num; i++) {
+        s = "";
+        for (var j = 1; j <= num - i + 1; j++) {
+          s = s + "*" + " ";
+        }
+        console.log(s);
+      }
+
+      //second pattern another method
+      var num = +prompt("Enter a number");
+      for (var i = 1; i <= num; i++) {
+        s = "";
+        for (var j = num; j >= i; j--) {
+          s = s + "*" + " ";
+        }
+        console.log(s);
+      }
+
+      //second pattern another method
+      var num = +prompt("Enter a number");
+      for (var i = num; i >= 1; i--) {
+        s = "";
+        for (var j = i; j >= 1; j--) {
+          s = s + "*" + " ";
+        }
+        console.log(s);
+      }
+    </script>
+  </body>
+</html>

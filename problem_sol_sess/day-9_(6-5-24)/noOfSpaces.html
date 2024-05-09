@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // method 1
+      str = "what are you doing";
+      console.log(str.split(" ").length - 1);
+
+      //method 2
+      str = "what are you doing";
+      c = 0;
+      for (i of str) {
+        if (i == " ") c++;
+      }
+      console.log(c);
+
+      //method 3
+      str = "what are you doing";
+      strArr = str.split("");
+      c = 0;
+      for (i of strArr) {
+        if (i == " ") c++;
+      }
+      console.log(c);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //map object
+      //   let fruits = new Map(["apples", 500], ["bananas", 60], ["carrots", 80]);
+      var fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200],
+      ]);
+      console.log(fruits);
+      console.log(typeof fruits);
+
+      //set() method
+      var fruits = new Map();
+      fruits.set("apples", 500);
+      fruits.set("bananas", 400);
+      fruits.set("carrot", 300);
+      console.log(fruits);
+
+      //get method
+      res = fruits.get("bananas");
+      console.log(res);
+
+      //size
+      res = fruits.size;
+      console.log(res);
+
+      //delete
+      fruits.delete("apples");
+      console.log(fruits);
+
+      //has
+      console.log(fruits.has("carrot"));
+
+      //entries
+      //values
+      //keys
+      //forEach()
+    </script>
+  </head>
+  <body></body>
+</html>

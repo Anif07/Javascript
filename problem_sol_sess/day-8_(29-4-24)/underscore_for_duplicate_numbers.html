@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // write program to print underscore in the place of duplicate values
+      //[2,1,2,2,3]-------->[2,1,3,_,_]
+
+      //method 1 in taking values from user
+      var arr = [2, 1, 2, 2, 3];
+      len = arr.length;
+      newarr = [];
+      for (var i of arr) {
+        if (!newarr.includes(i)) {
+          newarr.push(i);
+        }
+      }
+      times = arr.length - newarr.length;
+      for (var i = 1; i <= times; i++) {
+        newarr.push("_");
+      }
+      console.log(newarr);
+
+      // 2nd method
+      n = +prompt("how many elements:");
+      arr = [];
+      for (var i = 1; i <= n; i++) {
+        element = prompt();
+        arr.push(element);
+      }
+      len = arr.length;
+      newarr = [];
+      for (var i of arr) {
+        if (!newarr.includes(i)) {
+          newarr.push(i);
+        }
+      }
+      times = arr.length - newarr.length;
+      for (var i = 1; i <= times; i++) {
+        newarr.push("_");
+      }
+      console.log(newarr);
+
+      // 3rd method
+      n = +prompt("how many elements:");
+      arr = prompt().split(",");
+      len = arr.length;
+      newarr = [];
+      for (var i of arr) {
+        if (!newarr.includes(i)) {
+          newarr.push(i);
+        }
+      }
+      times = arr.length - newarr.length;
+      for (var i = 1; i <= times; i++) {
+        newarr.push("_");
+      }
+      console.log(newarr);
+    </script>
+  </head>
+  <body></body>
+</html>
