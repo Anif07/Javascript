@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Create a function that takes an array of objects like { name: "John", notes: [3, 5, 4]} and returns an array of objects like { name: "John", avgNote: 4 }. If a student has no notes (an empty array) then let's assume avgNote: 0.
+      // 	Example :
+      // [
+      //   { name: "John", notes: [3, 5, 4]}
+      // ] ➞ [
+      //   { name: "John", avgNote: 4 }
+      // ]
+
+      function avgNote(arr) {
+        for (i of arr) {
+          notes = i.notes;
+          let sum = 0,
+            c = 0;
+          for (j of notes) {
+            sum += j;
+            c++;
+          }
+          delete i.notes;
+          let avgnotes = sum / c;
+          if (!isNaN(avgnotes)) i["avgNote"] = avgnotes;
+          else i["avgNote"] = 0;
+        }
+        console.log(arr);
+      }
+      let arr = [{ name: "John", notes: [3, 5, 4] }];
+      avgNote(arr);
+    </script>
+  </body>
+</html>

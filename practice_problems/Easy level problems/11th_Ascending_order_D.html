@@ -10,22 +10,20 @@
       // sortByLength(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
 
       function sortByLength(arr) {
-        newarr = [];
-        lenarr = [];
-        for (var i of arr) {
-          len = i.length;
-          lenarr.push(i);
-        }
-        for (var i; i >= i; i++) {
-          for (var i of lenarr) {
-            if (i == i) {
+        for (var i = 1; i < arr.length; i++) {
+          for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i].length > arr[j].length) {
+              temp = arr[i];
+              arr[i] = arr[j];
+              arr[j] = temp;
             }
           }
-          if (newarr.length == arr.length) {
-            break;
-          }
         }
+        return arr;
       }
+
+      arr = ["a", "ccc", "dddd", "bb"];
+      console.log(sortByLength(arr));
     </script>
   </head>
   <body></body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      arr = [
+        { name: "Ravi", age: 22 },
+        { name: "Prabhas", age: 35 },
+      ];
+      // output: Ravi_22, Prabhas_35
+      res = "";
+      for (var obj of arr) {
+        s = "";
+        for (var key in obj) {
+          s = s + obj[key] + "_"; // iam using [] brackets why not . (full stop ) why because  value stores "name" we can pass it in ["name"] but we can't use it like obj."name" it will throw error
+        }
+        res += s.slice(0, -1) + ",";
+      }
+      console.log(res.slice(0, -1));
+
+      // second method
+      arr = [
+        { name: "Ravi", age: 22 },
+        { name: "Prabhas", age: 35 },
+      ];
+      res = [];
+      for (var obj of arr) {
+        array = [];
+        for (var key in obj) {
+          array.push(obj[key]);
+        }
+        res.push(array.join("_"));
+      }
+      console.log(res.join(","));
+    </script>
+  </body>
+</html>

@@ -18,6 +18,15 @@
       //  u - 0
 
       str = "we Are happy";
+      str = str.toLowerCase();
+      vowelArr = ["a", "e", "i", "o", "u"];
+      for (var i of vowelArr) {
+        c = 0;
+        for (var j of str) {
+          if (i == j) c++;
+        }
+        console.log(i, "->", c);
+      }
     </script>
   </body>
 </html>

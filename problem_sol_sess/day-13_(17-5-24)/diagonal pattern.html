@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // input=12345
+      // 1    5
+      //  2 4
+      //   3
+      //  2 4
+      // 1    5
+
+      input = "12345";
+      for (i = 0; i < input.length; i++) {
+        s = " ";
+        last = input.length - i - 1;
+        for (j = 0; j <= input.length; j++) {
+          //   console.log(j, last);
+          if (j == i || j == last) s += input[j] + " ";
+          else s += "  ";
+        }
+        console.log(s);
+      }
+      console.log(".................................");
+
+      //2.
+      //input =4
+      //   a
+      //   AB
+      //   abc
+      //   ABCD
+
+      rows = 4;
+      for (var i = 1; i <= rows; i++) {
+        s = "";
+        var lower = 97,
+          upper = 65;
+        for (var j = 1; j <= i; j++) {
+          if (i % 2 == 0) {
+            s += String.fromCharCode(upper);
+            upper++;
+          } else {
+            s += String.fromCharCode(lower);
+            lower++;
+          }
+        }
+        console.log(s);
+      }
+
+      //3.
+      //   A
+      //   ba
+      //   CBA
+      //   dcba
+
+      console.log(".................................");
+      rows = 4;
+      for (var i = 1; i <= rows; i++) {
+        s = "";
+        var lower = 97,
+          upper = 65;
+        for (var j = 1; j <= i; j++) {
+          if (i % 2 != 0) {
+            s += String.fromCharCode(upper);
+            upper++;
+          } else {
+            s += String.fromCharCode(lower);
+            lower++;
+          }
+        }
+        s = s.split("").reverse().join("");
+        console.log(s);
+      }
+      console.log("...............................");
+
+      //4.
+      //   A1
+      //   AB12
+      //   ABC123
+      //   ABCD1234
+
+      rows = 4;
+      for (i = 1; i <= rows; i++) {
+        s = "";
+        var upper = 65,
+          n = 1;
+        for (j = 1; j <= i; j++) {
+          s += String.fromCharCode(upper);
+          upper++;
+        }
+        for (k = 1; k <= i; k++) {
+          s += n;
+          n++;
+        }
+        console.log(s);
+      }
+    </script>
+  </body>
+</html>

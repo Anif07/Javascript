@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Create a function that moves all capital letters to the front of a word.
+      // Examples :
+
+      // capToFront("hApPy") ➞ "APhpy"
+
+      // capToFront("moveMENT") ➞ "MENTmove"
+
+      // capToFront("shOrtCAKE") ➞ "OCAKEshrt"
+
+      function capToFront(str) {
+        let cap = "",
+          otherStr = "";
+        for (var i = 0; i < str.length; i++) {
+          code = str.charCodeAt(i);
+          if (code >= 65 && code <= 90) {
+            cap += str[i];
+          } else otherStr += str[i];
+        }
+        var res = cap + otherStr;
+        console.log(res);
+      }
+      str = "hApPy";
+      capToFront(str);
+
+      str = "moveMENT";
+      capToFront(str);
+
+      str = "shOrtCAKE";
+      capToFront(str);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // see this after watching Ecma_Js file
+      // 1. Array destructuring
+      var Numbers = [1, 2, 3, 4, 5];
+      var [firstNumber] = Numbers;
+      console.log(firstNumber);
+
+      var [firstNumber, secondNum, , fourthNum] = Numbers;
+      console.log(firstNumber, secondNum, fourthNum);
+
+      var NumArr = [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+      ];
+      var [firstArr, secondArr, thirdArr] = NumArr;
+      console.log(firstArr, secondArr, thirdArr);
+
+      // 2. object Destructuring
+      var car = { brand: "Honda", color: "red" };
+      var { brand } = car; // variable name should equal to the property key
+      console.log(brand);
+      console.log({ brand });
+
+      var car = { brand: "Honda", color: "red", year: 2015 };
+      var { brand, year } = car;
+      console.log(brand, year);
+
+      //nested objects
+      person = {
+        name: "ravi",
+        age: 22,
+        address: {
+          street: "ramakrishnapuram street",
+          city: "anantapur",
+          pincode: 515004,
+        },
+      };
+      var {
+        name,
+        age,
+        address: { city },
+      } = person;
+      console.log(name, age, city);
+
+      // we can also change the name of property using an alias
+      var { name: n, age, address } = person;
+      console.log(n);
+
+      //rest operator
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      var [fisrt, second, third, ...remaining] = arr;
+      console.log(fisrt, second, third);
+      console.log(remaining);
+    </script>
+  </body>
+</html>

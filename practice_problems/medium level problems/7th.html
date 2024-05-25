@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Write a function that accepts an array of strings. Return the longest string(can not use predefined function).
+
+      // Input: [‘nik’, ’mikhil’, ’Cow’,’Elephant’]
+      // Output: Elephant
+
+      function longestString(arr) {
+        var lonString = "",
+          len = 0;
+        for (var i of arr) {
+          c = 0;
+          for (var j of i) {
+            c++;
+          }
+          if (c > len) {
+            lonString = i;
+            len = c;
+          }
+        }
+        console.log(lonString);
+      }
+      arr = ["nik", "mikhil", "Cow", "Elephant"];
+      longestString(arr);
+    </script>
+  </body>
+</html>

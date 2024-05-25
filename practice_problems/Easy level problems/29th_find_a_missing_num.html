@@ -28,6 +28,22 @@
           console.log(i);
         }
       }
+
+      // 2nd method
+      function missNum(arr) {
+        arr.sort((a, b) => a - b);
+        c = arr[0];
+        for (var i of arr) {
+          if (i != c) {
+            console.log(c);
+            break;
+          }
+          c++;
+        }
+      }
+
+      arr = [5, 2, 1, 4];
+      missNum(arr);
     </script>
   </head>
   <body></body>

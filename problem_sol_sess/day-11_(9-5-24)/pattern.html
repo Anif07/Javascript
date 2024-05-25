@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1.
+      num = 5;
+      var num1 = 1,
+        num2 = 2;
+      for (var i = 1; i <= num; i++) {
+        if (i % 2 == 0) {
+          s = "";
+          for (j = 1; j <= i; j++) {
+            s = s + num2 + " ";
+            num2 += 2;
+          }
+          console.log(s);
+        } else {
+          s = "";
+          for (var j = 1; j <= i; j++) {
+            s = s + num1 + " ";
+            num1 += 2;
+          }
+          console.log(s);
+        }
+      }
+
+      //2.
+      console.log(".....................................");
+      rows = 6;
+      for (var i = 1; i <= rows; i++) {
+        s = "";
+        for (var k = 1; k <= rows - i; k++) {
+          s += " ";
+        }
+        for (var j = 1; j <= i; j++) {
+          s += "*" + " ";
+        }
+        console.log(s);
+      }
+
+      //3.
+      console.log("......................................");
+      var rows = 5;
+      for (var i = 1; i <= rows; i++) {
+        s = "";
+        for (var j = 1; j <= i; j++) {
+          if (j % 2 == 0) s += "0" + " ";
+          else s += "1" + " ";
+        }
+        console.log(s);
+      }
+
+      //4.
+      console.log("......................................");
+      var rows = 6;
+      for (var i = 1; i <= rows; i++) {
+        s = "";
+        for (var k = 1; k <= rows - i; k++) {
+          s += " ";
+        }
+        for (j = 1; j <= i; j++) {
+          s += j + " ";
+        }
+        console.log(s);
+      }
+
+      //5.
+      console.log("......................................");
+      var rows = 5;
+
+      for (var i = 1; i <= rows; i++) {
+        a = 65;
+        s = "";
+        for (var j = 1; j <= i; j++) {
+          s += String.fromCharCode(a) + " ";
+          a++;
+        }
+        console.log(s);
+      }
+    </script>
+  </body>
+</html>

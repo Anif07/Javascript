@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+      // Examples :
+      // toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+      // toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots",12]]
+      // toArray({}) ➞ []
+
+      var obj = { a: 1, b: 2 };
+      // let obj = { shrimp: 15, tots: 12 };
+      //   let obj = {};
+      mainArr = [];
+      for (var i of Object.keys(obj)) {
+        arr = [];
+        arr.push(i);
+        arr.push(obj[i]);
+        mainArr.push(arr);
+      }
+      console.log(mainArr);
+
+      //another way without methods
+      var obj = { a: 1, b: 2 };
+      resArr = [];
+      for (var i in obj) {
+        arr = [];
+        arr.push(i);
+        arr.push(obj.a);
+        resArr.push(arr);
+      }
+      console.log(resArr);
+    </script>
+  </body>
+</html>

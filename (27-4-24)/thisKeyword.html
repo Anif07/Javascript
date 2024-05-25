@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      this.a = 10;
+      console.log(this.a); // here this referse to the global object that is window
+      console.log(this);
+
+      //
+      this.b = 20;
+      function example() {
+        console.log(this.b); // here this referse to the parent object (window object)
+      }
+      example();
+
+      // object
+      var user = {
+        name: "anif",
+        age: 21,
+        getDetails() {
+          console.log(this.name); // here this referse to the current object(user)
+          console.log(this);
+        },
+      };
+      user.getDetails();
+
+      // nested object with normal function
+      var user = {
+        name: "anif",
+        age: 21,
+        childObj: {
+          newName: "Ravi Teja",
+          getDetails() {
+            console.log(this.newName, "and", this.name); // here  normal function this is pointing to the immediate parent
+          },
+        },
+      };
+      user.childObj.getDetails();
+
+      // object with arrow function
+      var user = {
+        name: "anif",
+        age: 21,
+        getDetails: () => {
+          console.log(this.name); // here arrow function is pointing to the global object (window),,, here arrow function take the reference from the parent function
+          console.log(this);
+        },
+      };
+      user.getDetails();
+
+      var user = {
+        name: "anif",
+        age: 21,
+        getDetails() {
+          let nestedArrow = () => console.log(this.name); // now its pointing to parent function
+          nestedArrow();
+        },
+      };
+      user.getDetails();
+    </script>
+  </body>
+</html>

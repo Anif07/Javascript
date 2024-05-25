@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Hollow patterns
+
+      var rows = 5;
+      for (var i = 1; i <= rows; i++) {
+        s = "";
+        for (var j = 1; j <= rows; j++) {
+          if (i == 1 || i == rows || j == 1 || j == rows) s += "*" + " ";
+          else s += "  ";
+        }
+        console.log(s);
+      }
+
+      // 2.
+      var rows = 5;
+      for (var i = 1; i <= rows; i++) {
+        s = "";
+        for (var j = 1; j <= rows; j++) {
+          if (i == 1 || i == rows || j == 1 || j == rows || i == j)
+            s += "*" + " ";
+          else s += "  ";
+        }
+        console.log(s);
+      }
+
+      // 3.
+      // 15 24 33 42 51
+      var rows = 5;
+      for (var i = 1; i <= rows; i++) {
+        s = "";
+        for (var j = 1; j <= rows; j++) {
+          if (
+            i == 1 ||
+            i == rows ||
+            j == 1 ||
+            j == rows ||
+            i == j ||
+            i + j == rows + 1
+          )
+            s += "*" + " ";
+          else s += "  ";
+        }
+        console.log(s);
+      }
+
+      //4.
+      var rows = 10;
+      mid = Number.parseInt(rows / 2);
+      for (var i = 1; i <= rows; i++) {
+        s = "";
+        for (var j = 1; j <= rows; j++) {
+          if (
+            i == 1 ||
+            i == rows ||
+            j == 1 ||
+            j == rows ||
+            i == j ||
+            i + j == rows + 1 ||
+            i == mid ||
+            j == mid
+          )
+            s += "*" + " ";
+          else s += "  ";
+        }
+        console.log(s);
+      }
+    </script>
+  </body>
+</html>

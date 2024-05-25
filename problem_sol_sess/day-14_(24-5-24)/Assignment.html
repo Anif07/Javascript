@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. print Perfect time in the given array of objects
+
+      arr = [
+        { time1: "10:45" },
+        { time2: "11:05" },
+        { time3: "06:00" },
+        { time4: "12:12" },
+        { time5: "04:57" },
+      ];
+      //output: time3;
+
+      for (var obj of arr) {
+        for (var key in obj) {
+          minutes = obj[key];
+          if (minutes.slice(-2) == "00") {
+            console.log(key);
+          }
+        }
+      }
+      console.log("...................................");
+
+      // 2) Non perfect
+      // output:
+      // time1
+      // time2
+      // time4
+      // time5
+
+      for (var obj of arr) {
+        for (key in obj) {
+          minutes = obj[key];
+          if (minutes.slice(-2) !== "00") {
+            console.log(key);
+          }
+        }
+      }
+      console.log("...................................");
+
+      // 3) How many minutes need to be added to become a next perfect time for each one
+      // output:
+      // time1: 15 minutes, 11:00
+      // time2: 55 minutes, 12:00
+      // time3: 0 minutes
+      // time4: 48 minutes, 01:00
+      // time5: 3 minutes, 05:00
+
+      arr = [
+        { time1: "10:45" },
+        { time2: "11:05" },
+        { time3: "06:00" },
+        { time4: "12:12" },
+        { time5: "04:57" },
+      ];
+
+      for (var obj of arr) {
+        for (key in obj) {
+          minutes = obj[key].slice(-2);
+          timeToRound = 60 - Number(minutes);
+          if (timeToRound !== 60) {
+            console.log(key, timeToRound);
+          } else {
+            console.log(key, 0);
+          }
+          //   console.log(timeToRound == 60 ? (key, 0) : (key, timeToRound));
+        }
+      }
+    </script>
+  </body>
+</html>
