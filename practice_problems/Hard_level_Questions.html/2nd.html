@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.
+
+      // Examples :
+
+      // numInStr(["1a", "a", "2b", "b"]) ➞ ["1a", "2b"]
+
+      // numInStr(["abc", "abc10"]) ➞ ["abc10"]
+
+      // numInStr(["abc", "ab10c", "a10bc", "bcd"]) ➞ ["ab10c", "a10bc"]
+
+      // numInStr(["this is a test", "test1"]) ➞ ["test1"]
+
+      function numInStr(arr) {
+        resArr = [];
+
+        for (var str of arr) {
+          s = "";
+          str = str.replaceAll(" ", "");
+          for (var i of str) {
+            if (!isNaN(Number(i))) {
+              s = str;
+            }
+          }
+          if (s != "") resArr.push(s);
+        }
+        console.log(resArr);
+      }
+      numInStr(["1a", "a", "2b", "b"]);
+      numInStr(["abc", "abc10"]);
+      numInStr(["abc", "ab10c", "a10bc", "bcd"]);
+      numInStr(["this is a test", "test1"]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  2. input = [
+      // { name: "Jane Doe", id: 2 , age: 19},
+      // { name: "Billy Doe", id: 3 , age:25},
+      // { name: "Deepak", id: 4 , age:10},
+      // { name: "Abhishek", id: 5 , age:19},
+      // { name: "Mohan", id: 6 , age:40},
+      // { name: "Rohit", id: 7 , age:19}
+      // ];
+      // output = [
+      //   { name: 'Jane Doe', id: 2, age: 19, vowelCount: 4 },
+      //   { name: 'Billy Doe', id: 3, age: 25, vowelCount: 3 },
+      //   { name: 'Deepak', id: 4, age: 10, vowelCount: 3 },
+      //   { name: 'Abhishek', id: 5, age: 19, vowelCount: 3 },
+      //   { name: 'Mohan', id: 6, age: 40, vowelCount: 2 },
+      //   { name: 'Rohit', id: 7, age: 19, vowelCount: 2 }
+      // ]
+      // count the vowels present for name property/key presented in the array of objects, create a new key/property with the name of vowels in the object and add the count to it and don't create a new array modify the existing array only
+
+      input = [
+        { name: "Jane Doe", id: 2, age: 19 },
+        { name: "Billy Doe", id: 3, age: 25 },
+        { name: "Deepak", id: 4, age: 10 },
+        { name: "Abhishek", id: 5, age: 19 },
+        { name: "Mohan", id: 6, age: 40 },
+        { name: "Rohit", id: 7, age: 19 },
+      ];
+
+      for (var obj of input) {
+        name = obj["name"];
+        vowels = ["a", "e", "i", "o", "u"];
+        c = 0;
+        for (var i of name) {
+          if (vowels.includes(i.toLowerCase())) {
+            c++;
+          }
+        }
+        obj["VowelCount"] = c;
+      }
+      console.log(input);
+    </script>
+  </body>
+</html>

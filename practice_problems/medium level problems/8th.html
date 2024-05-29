@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Most Commonly Used two Character in String(can not use predefined function)
+
+      // Input: ‘Hii i am ram’
+      // Output; i, a
+
+      //******* this is Wrong and try again
+      Input = "Hii i am ram";
+      obj = {};
+      //   for (var i of Input) {
+      //     c = 0;
+      //     for (var j of Input) {
+      //       if (i == j) c++;
+      //     }
+      //     obj[i] = c;
+      //   }
+
+      // i can also use this-
+
+      for (var i of Input) {
+        obj[i] = (obj[i] || 0) + 1;
+      }
+      var max = "",
+        count = 0;
+      var max2 = "",
+        count2 = 0;
+      for (var i in obj) {
+        if (obj[i] > count) {
+          max = i;
+          count = obj[i];
+        } else if (obj[i] > count2 && obj[i] < count) {
+          max2 = i;
+          count2 = obj[i];
+        }
+      }
+
+      console.log(max, max2);
+    </script>
+  </body>
+</html>

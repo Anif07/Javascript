@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 11. Write Program to remove duplicate elements in an array and sort it in Accending order(can not use predefined function).
+
+      // Input: [Z, A, P, C, A, Z , K, N, C]
+      // Output: [A, C, K,N, P, Z]
+
+      input = ["Z", "A", "P", "C", "A", "Z", "K", "N", "C"];
+      newArr = [];
+      for (var i of input) {
+        if (!newArr.includes(i)) {
+          newArr.push(i);
+        }
+      }
+
+      //sorting
+      for (var i = 0; i < newArr.length; i++) {
+        for (var j = i + 1; j < newArr.length; j++) {
+          if (newArr[j].charCodeAt(0) < newArr[i].charCodeAt(0)) {
+            temp = newArr[i];
+            newArr[i] = newArr[j];
+            newArr[j] = temp;
+          }
+        }
+      }
+      console.log(newArr);
+    </script>
+  </body>
+</html>

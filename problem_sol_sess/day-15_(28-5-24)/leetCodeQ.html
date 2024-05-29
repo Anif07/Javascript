@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1. num1=125
+      // num2=3
+      //output=[1,2,8]
+      num1 = 125;
+      num2 = 3;
+      sum = (num1 + num2).toString();
+      console.log(sum.split(""));
+
+      //2. non-fibinocci series
+      // input=5
+      // output= 4, 6, 7, 9, 10
+
+      num = 5;
+      i = 0;
+      str = "";
+      nonFib_num = 0;
+      var a = 0,
+        b = 1;
+      while (nonFib_num < 5) {
+        for (var j = a + 1; j < b; j++) {
+          nonFib_num++;
+          str += j + " ";
+          if (nonFib_num == 5) {
+            break;
+          }
+        }
+        // str += a + " ";
+        c = a + b;
+        a = b;
+        b = c;
+
+        i++;
+      }
+      console.log(str);
+    </script>
+  </body>
+</html>

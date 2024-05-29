@@ -63,13 +63,21 @@
 
       for (var obj of arr) {
         for (key in obj) {
+          temp = 0;
           minutes = obj[key].slice(-2);
           timeToRound = 60 - Number(minutes);
-          if (timeToRound !== 60) {
-            console.log(key, timeToRound);
-          } else {
-            console.log(key, 0);
-          }
+          timeToRound = timeToRound == 60 ? 0 : timeToRound;
+          hour = obj[key].slice(0, 2);
+          roundedHour = minutes == "00" ? Number(hour) : Number(hour) + 1;
+          // >12 value=temp+(13-12)
+          roundedHour =
+            roundedHour > 12 ? temp + (roundedHour - 12) : roundedHour;
+          console.log(`${key}: ${timeToRound} minutes, ${roundedHour}:00`);
+          // if (timeToRound !== 60) {
+          //   console.log(key, timeToRound, roundedHour);
+          // } else {
+          //   console.log(key, 0);
+          // }
           //   console.log(timeToRound == 60 ? (key, 0) : (key, timeToRound));
         }
       }

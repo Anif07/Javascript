@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Write a Program to Remove brackets from an algebraic expression(can not use predefined function).
+
+      // Input: a + b-(9+c)=3
+      // Output: a + b- 9+c=3
+
+      Input = "a + b-(9+c)=3";
+      res = "";
+      for (var i of Input) {
+        if (i !== "(" && i != ")") {
+          res += i;
+        }
+      }
+      console.log(res);
+    </script>
+  </body>
+</html>

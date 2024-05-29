@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      arr = [
+        {
+          name: "John",
+          age: 25,
+          subjects: {
+            Math: { marks: 85, outOf: 100 },
+            Science: { marks: 78, outOf: 100 },
+            History: { marks: 92, outOf: 100 },
+          },
+        },
+        {
+          name: "Emily",
+          age: 22,
+          subjects: {
+            Math: { marks: 90, outOf: 100 },
+            Science: { marks: 85, outOf: 100 },
+            History: { marks: 80, outOf: 100 },
+          },
+        },
+      ];
+      for (var obj of arr) {
+        subjects = obj.subjects;
+        const {
+          Math: { marks: Mmarks },
+          Science: { marks: Smarks },
+          History: { marks: Hmarks },
+        } = subjects;
+        sum = Mmarks + Smarks + Hmarks;
+        obj["TotalMarks"] = sum;
+      }
+      console.log(arr);
+    </script>
+  </body>
+</html>
