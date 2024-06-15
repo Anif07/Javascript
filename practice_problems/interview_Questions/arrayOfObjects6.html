@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const products = [
+        { name: "laptop", price: 1000 },
+        { name: "phone", price: 500 },
+        { name: "tablet", price: 300 },
+        { name: "watch", price: 200 },
+      ];
+
+      const minPrice = 300;
+      const maxPrice = 1000;
+
+      // Your function here
+      function filterByPriceRange(products, minPrice, maxPrice) {
+        resArr = [];
+        for (var obj of products) {
+          if (obj.price >= minPrice && obj.price <= maxPrice) {
+            resArr.push(obj);
+          }
+        }
+        return resArr;
+      }
+
+      console.log(filterByPriceRange(products, minPrice, maxPrice));
+      // Output: [
+      //   { name: 'laptop', price: 1000 },
+      //   { name: 'phone', price: 500 },
+      //   { name: 'tablet', price: 300 }
+      // ]
+    </script>
+  </body>
+</html>

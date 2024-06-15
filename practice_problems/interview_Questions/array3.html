@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function mostFrequentElement(arr) {
+        obj = {};
+        maxElem = arr[0];
+        maxCount = 0;
+        for (var i of arr) {
+          if (i in obj) {
+            obj[i] = obj[i] + 1;
+          } else {
+            obj[i] = 1;
+          }
+        }
+        for (var j in obj) {
+          if (obj[j] > maxCount) {
+            maxElem = Number(j);
+            maxCount = obj[j];
+          }
+        }
+        return maxElem;
+      }
+      console.log(mostFrequentElement([1, 3, 1, 3, 2, 1])); // 1
+      console.log(mostFrequentElement([3, 3, 1, 1, 2, 2, 2])); // 2
+      console.log(mostFrequentElement([1, 2, 3, 4, 5])); // 1
+      console.log(mostFrequentElement([5, 5, 5, 4, 4, 4, 3, 3, 3, 3])); // 3
+    </script>
+  </body>
+</html>

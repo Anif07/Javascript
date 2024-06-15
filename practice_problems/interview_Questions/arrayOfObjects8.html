@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //You are given an array of objects, where each object represents a product with a name and a quantity. Write a function to find the product name with the highest total quantity.
+      const products = [
+        { name: "apple", quantity: 10 },
+        { name: "banana", quantity: 5 },
+        { name: "apple", quantity: 15 },
+        { name: "orange", quantity: 7 },
+        { name: "banana", quantity: 8 },
+      ];
+
+      // Your function here
+      function mostFrequentProduct(products) {
+        newObj = {};
+        for (var obj of products) {
+          if (!(obj.name in newObj)) {
+            newObj[obj.name] = obj.quantity;
+          } else {
+            newObj[obj.name] = newObj[obj.name] + obj.quantity;
+          }
+        }
+        (name = ""), (max = 0);
+        for (var i in newObj) {
+          if (newObj[i] > max) {
+            max = newObj[i];
+            name = i;
+          }
+        }
+        return name;
+      }
+
+      console.log(mostFrequentProduct(products)); // Output: 'apple'
+    </script>
+  </body>
+</html>

@@ -26,6 +26,15 @@
             History: { marks: 80, outOf: 100 },
           },
         },
+        {
+          name: "Bharath",
+          age: 25,
+          subjects: {
+            Math: { marks: 87, outOf: 100 },
+            Science: { marks: 84, outOf: 100 },
+            History: { marks: 75, outOf: 100 },
+          },
+        },
       ];
       for (var obj of arr) {
         subjects = obj.subjects;
@@ -36,6 +45,18 @@
         } = subjects;
         sum = Mmarks + Smarks + Hmarks;
         obj["TotalMarks"] = sum;
+      }
+      console.log(arr);
+
+      // other method without destructuring
+      for (var obj of arr) {
+        subjects = obj.subjects;
+        sum = 0;
+        for (var i in subjects) {
+          // console.log(i);
+          sum += subjects[i]["marks"];
+        }
+        obj["totalMarks"] = sum;
       }
       console.log(arr);
     </script>

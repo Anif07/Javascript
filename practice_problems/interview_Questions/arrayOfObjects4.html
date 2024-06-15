@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const people = [
+        { name: "John", age: 30 },
+        { name: "Jane", age: 45 },
+        { name: "Mary", age: 40 },
+        { name: "Peter", age: 60 },
+      ];
+
+      // Your function here
+      function findOldestPerson(people) {
+        var maxAge = 0,
+          name = "";
+        for (var obj of people) {
+          if (obj.age > maxAge) {
+            maxAge = obj.age;
+            name = obj.name;
+          }
+        }
+        return name;
+      }
+
+      console.log(findOldestPerson(people)); // Output: 'Peter'
+    </script>
+  </body>
+</html>

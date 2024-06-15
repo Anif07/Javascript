@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1) a=[{name:"Ajay",{name:"Ranjith"},{name:"Kerthii"}}]
+      // output= [{name:"ajAy",{name:"Rinjath"},{name:"Kirthie"}}]
+      // reverse the vowels
+
+      arr = [{ name: "Ajay" }, { name: "Ranjith" }, { name: "Kerthii" }];
+      resArr = [];
+      for (var obj of arr) {
+        name = obj.name;
+        vowels = "aeiouAEIOU";
+        strvow = "";
+        for (var i of name) {
+          if (vowels.includes(i)) strvow += i;
+        }
+        strvow = strvow.split("").reverse().join("");
+        res = "";
+        c = 0;
+        for (var k of name) {
+          if (vowels.includes(k)) {
+            res += strvow[c];
+            c++;
+          } else {
+            res += k;
+          }
+        }
+        resArr.push({ name: res });
+      }
+
+      console.log(resArr);
+
+      // 2. arr=[{name:"Bob",age:25},{name:"Jack",age:32},{name:"Joel",age:21}]
+      // output : print the names of the candidates based on their age in asc order
+
+      arr = [
+        { name: "Bob", age: 25 },
+        { name: "Jack", age: 32 },
+        { name: "Joel", age: 21 },
+      ];
+      var ages = [],
+        names = [];
+      for (var obj of arr) {
+        ages.push(obj.age);
+        names.push(obj.name);
+      }
+      ages.sort((a, b) => a - b);
+      for (var i of ages) {
+        obj = arr.find((obj) => obj.age == i);
+        console.log(obj.name);
+      }
+
+      // other method-
+      console.log("............................");
+      arr = [
+        { name: "Bob", age: 25 },
+        { name: "Jack", age: 32 },
+        { name: "Joel", age: 21 },
+      ];
+      var ages = [],
+        names = [];
+      for (var obj of arr) {
+        ages.push(obj.age);
+        names.push(obj.name);
+      }
+      console.log(ages, names);
+      var min = ages[0];
+
+      for (var i = 0; i < 3; i++) {
+        for (var j in ages) {
+          if (ages[j] < min) {
+            min = ages[j];
+            console.log(min);
+          }
+        }
+        index = ages.indexOf(min);
+        console.log(index);
+        console.log(names[index]);
+        names.splice(index, 1);
+        ages.splice(index, 1);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const input = "ababd";
+
+      // Your task: Write a function that finds the longest palindromic substring in the given string.
+      // A palindrome is a string that reads the same forward and backward.
+      // Expected output: "bab" or "aba" (since both are valid palindromic substrings)
+
+      function longestPalindrome(s) {
+        (start = 0), (resStr = "");
+        for (var start = 0; start < s.length; start++) {
+          for (var end = start + 1; end <= s.length; end++) {
+            temp = s.slice(start, end);
+            rev = temp.split("").reverse().join("");
+            if (temp == rev && temp.length > resStr.length) {
+              resStr = temp;
+            }
+          }
+        }
+        return resStr;
+      }
+
+      console.log(longestPalindrome(input)); // "bab" or "aba"
+    </script>
+  </body>
+</html>

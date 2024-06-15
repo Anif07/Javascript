@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Write a program that takes array of strings, among the array of strings print the string, which contains highest number of duplicate characters in it.
+      // Input: [“Hello world”, “Programming”, “Unnecessarinass”]
+      // Output: Unnecessarinass
+
+      Input = ["Hello world", "Programming", "Unnecessarinass"];
+      maxStr = "";
+      dupCount = 0;
+      for (var str of Input) {
+        obj = {};
+
+        for (var i of str) {
+          if (i in obj) {
+            obj[i] = obj[i] + 1;
+          } else {
+            obj[i] = 1;
+          }
+        }
+        c = 0;
+        for (var j in obj) {
+          if (obj[j] > 1) {
+            c += 1;
+          }
+        }
+        if (c > dupCount) {
+          dupCount = c;
+          maxStr = str;
+        }
+      }
+      console.log(maxStr);
+    </script>
+  </body>
+</html>

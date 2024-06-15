@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function nestedArraySum(arr) {
+        let sum = 0;
+        for (elem of arr) {
+          if (Array.isArray(elem)) {
+            sum += nestedArraySum(elem);
+          } else {
+            sum += elem;
+          }
+        }
+        return sum;
+      }
+
+      console.log(nestedArraySum([1, [2, [3, 4]], 5])); // 15
+      console.log(nestedArraySum([[1, 2, [3]], 4])); // 10
+      console.log(nestedArraySum([[[[1]]], 2, 3])); // 6
+    </script>
+  </body>
+</html>

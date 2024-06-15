@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const input = { a: 1, b: { c: 2, d: { e: 3, f: { g: 4 } } }, h: 5 };
+
+      // Your task: Write a function that calculates the sum of all numbers in the nested object
+      // Expected output: 15
+
+      function sumNestedNumbers(obj) {
+        sum = 0;
+        for (var i in obj) {
+          if (obj[i] instanceof Object) {
+            sum += sumNestedNumbers(obj[i]);
+          } else {
+            sum += obj[i];
+          }
+        }
+        return sum;
+      }
+
+      console.log(sumNestedNumbers(input)); // 15
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // rows=5
+      // 1
+      // 2 6
+      // 3 7 10
+      // 4 8 11 13
+      // 5 9 12 14 15
+
+      rows = 5;
+      for (var i = 1; i <= rows; i++) {
+        rem = i;
+        s = "";
+        for (var j = 1; j <= i; j++) {
+          if (j == 1) {
+            s += i + " ";
+          } else {
+            a = rem + rows - j + 1;
+            rem = a;
+            s += a + " ";
+          }
+        }
+        console.log(s);
+      }
+    </script>
+    g
+  </body>
+</html>

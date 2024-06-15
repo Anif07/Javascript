@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const input = [
+        { name: "Jane Doe", id: 2, age: 19 },
+        { name: "Billy Doe", id: 3, age: 25 },
+        { name: "Deepak", id: 4, age: 10 },
+        { name: "Abhishek", id: 5, age: 19 },
+        { name: "Mohan", id: 6, age: 40 },
+        { name: "Rohit", id: 7, age: 19 },
+      ];
+
+      // Your task: Write a function that groups the people by their age
+      // Expected output:
+      // {
+      //   10: ["Deepak"],
+      //   19: ["Jane Doe", "Abhishek", "Rohit"],
+      //   25: ["Billy Doe"],
+      //   40: ["Mohan"]
+      // }
+      let ages = [];
+      let resobj = {};
+      for (var obj of input) {
+        if (!ages.includes(obj.age)) {
+          ages.push(obj.age);
+        }
+      }
+      for (var age of ages) {
+        newObj = input.filter((obj) => obj.age == age);
+        resobj[age] = newObj.map((obj) => obj.name);
+      }
+      console.log(resobj);
+    </script>
+  </body>
+</html>

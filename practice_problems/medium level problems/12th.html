@@ -14,6 +14,51 @@
       //           Subseq2 = [7, -1, 4, -3]       : false
       //           Subseq3 = [ -1]                 : true
       //           Subseq4 = [13, -3, 4, 1]         : false
+
+      var arr = [5, 7, 3, 2, 2, 7, -1, 5, -3, 13, 4];
+
+      function isSubSeq(subSeq) {
+        subLen = subSeq.length;
+        seq = false;
+        for (var i = 0; i < arr.length; i++) {
+          if (
+            JSON.stringify(arr.slice(i, i + subLen)) == JSON.stringify(subSeq)
+          ) {
+            seq = true;
+            break;
+          }
+        }
+        console.log(seq);
+      }
+
+      isSubSeq([7, -1, 5, -3]);
+      isSubSeq([7, -1, 4, -3]);
+      isSubSeq([-1]);
+      isSubSeq([13, -3, 4, 1]);
+      isSubSeq([3, 2, 2, 7]);
+
+      // another method-
+      var arr = [5, 7, 3, 2, 2, 7, -1, 5, -3, 13, 4];
+
+      function isSubSeq(subSeq) {
+        let subIndex = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === subSeq[subIndex]) {
+            subIndex++;
+          }
+          if (subIndex === subSeq.length) {
+            console.log(true);
+            return;
+          }
+        }
+        console.log(false);
+      }
+
+      isSubSeq([7, -1, 5, -3]); // true
+      isSubSeq([7, -1, 4, -3]); // false
+      isSubSeq([-1]); // true
+      isSubSeq([13, -3, 4, 1]); // false
     </script>
   </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const users1 = [
+        { name: "Alice", email: "alice@example.com" },
+        { name: "Bob", email: "bob@example.com" },
+      ];
+
+      const users2 = [
+        { name: "Charlie", email: "charlie@example.com" },
+        { name: "Alice", email: "alice@example.com" },
+      ];
+
+      // Your function here
+      function mergeAndDeduplicate(users1, users2) {
+        emails = new Set();
+        mergedArr = [];
+        combinedUsers = [...users1, ...users2];
+        for (var user of combinedUsers) {
+          if (!emails.has(user.email)) {
+            emails.add(user.email);
+            mergedArr.push(user);
+          }
+        }
+        return mergedArr;
+      }
+
+      console.log(mergeAndDeduplicate(users1, users2));
+      // Output: [
+      //   { name: 'Alice', email: 'alice@example.com' },
+      //   { name: 'Bob', email: 'bob@example.com' },
+      //   { name: 'Charlie', email: 'charlie@example.com' }
+      // ]
+    </script>
+  </body>
+</html>
